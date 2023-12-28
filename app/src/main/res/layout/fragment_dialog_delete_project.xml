@@ -32,34 +32,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_delete_dialog_inhomepage" />
 
-    <Button
-        android:id="@+id/btn_delete_alert_dialog_delete_project_homepage"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:text="Delete"
-        android:textAllCaps="false"
-        android:textColor="@color/Primary"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_cancel_alert_dialog_delete_project_homepage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_description_delete_project"
-        app:strokeColor="@color/Primary" />
-
-    <Button
-        android:id="@+id/btn_cancel_alert_dialog_delete_project_homepage"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:text="Cancel"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        app:backgroundTint="@color/Primary"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="24dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@id/btn_delete_alert_dialog_delete_project_homepage"
-        app:layout_constraintTop_toBottomOf="@+id/tv_description_delete_project" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_delete_project">
+
+        <Button
+            android:id="@+id/btn_cancel_alert_dialog_delete_project_homepage"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:backgroundTint="@color/Primary"/>
+
+        <Button
+            android:id="@+id/btn_delete_alert_dialog_delete_project_homepage"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/Primary"
+            android:textSize="13sp"
+            app:strokeColor="@color/Primary" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
