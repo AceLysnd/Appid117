@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tv_profile_user_in_notification"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_ellipse_user"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingTop="16dp"
+                android:text="UN"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_description_notification"
+                android:layout_width="277dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="You haved join this project as QA"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_user_in_notification"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_user_in_notification" />
+
+            <TextView
+                android:id="@+id/tv_name_project_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="2"
+                android:layout_marginTop="3sp"
+                android:text="Logibug"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_description_notification"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_notification" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="29 Maret 2023"
+                android:textColor="@color/black"
+                android:textSize="8sp"
+                android:layout_marginTop="5sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name_project_notification"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_project_notification" />
+
+            <ImageView
+                android:id="@+id/imageView_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_line"
+                app:layout_constraintStart_toEndOf="@id/tv_time"
+                app:layout_constraintEnd_toStartOf="@id/tv_current_date"
+                app:layout_constraintTop_toTopOf="@id/tv_time"/>
+
+            <TextView
+                android:id="@+id/tv_current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="10.00"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"
+                android:textSize="8sp"
+                android:layout_marginTop="5sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_project_notification" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

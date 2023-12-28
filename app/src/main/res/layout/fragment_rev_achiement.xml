@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_achievement"
+    tools:context=".ui.account.achievement.RevAchiementFragment">
+
+    <ImageButton
+        android:id="@+id/ib_navigate_back_level_criteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_navigate_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name_my_testing_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Achievement"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_navigate_back_level_criteria"
+        app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_level_criteria" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_cardview_achievement"
+        android:layout_width="372dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_my_testing_version"
+        android:background="@drawable/bg_achievement_user">
+
+        <ImageView
+            android:id="@+id/iv_achievement_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/ic_achievement_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_user_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_achievement_user"
+            app:layout_constraintTop_toTopOf="@+id/iv_achievement_user" />
+
+        <TextView
+            android:id="@+id/tv_rank_level_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Beginner"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_user_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_user_achievement" />
+
+        <TextView
+            android:id="@+id/tv_finished_amount_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="100"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/iv_achievement_user"
+            app:layout_constraintTop_toBottomOf="@+id/iv_achievement_user" />
+
+        <TextView
+            android:id="@+id/tv_finished_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="test case"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintStart_toEndOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintTop_toTopOf="@+id/tv_finished_amount_test_case_in_achievement" />
+
+        <ProgressBar
+            android:id="@+id/progress_level_test_case_achievement"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="310dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progressbar_horizontal"
+            app:layout_constraintStart_toStartOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/tv_finished_test_case_in_achievement" />
+
+        <ImageView
+            android:id="@+id/iv_zero_indicator_level_test_case_achievement"
+            android:layout_width="16sp"
+            android:layout_height="16sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_ellipse_progresbar"
+            app:layout_constraintStart_toStartOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <TextView
+            android:id="@+id/tv_zero_indicator_level_test_case_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="5sp"
+            app:layout_constraintStart_toStartOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <ImageView
+            android:id="@+id/iv_100_indicator_level_test_case_achievement"
+            android:layout_width="16sp"
+            android:layout_height="16sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_ellipse_progresbar"
+            app:layout_constraintEnd_toEndOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintStart_toStartOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <TextView
+            android:id="@+id/tv_100_indicator_level_test_case_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="5sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintStart_toStartOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <ImageView
+            android:id="@+id/iv_200_indicator_level_test_case_achievement"
+            android:layout_width="16sp"
+            android:layout_height="16sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_ellipse_progresbar"
+            app:layout_constraintEnd_toEndOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <TextView
+            android:id="@+id/tv_200_indicator_level_test_case_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="3sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="200"
+            android:textColor="@color/white"
+            android:textSize="5sp"
+            app:layout_constraintEnd_toEndOf="@+id/progress_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/progress_level_test_case_achievement" />
+
+        <TextView
+            android:id="@+id/tv_description_finished_amount_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="100"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/iv_zero_indicator_level_test_case_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/iv_zero_indicator_level_test_case_achievement" />
+
+        <TextView
+            android:id="@+id/tv_description_more_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="more test case to reach "
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_description_finished_amount_test_case_in_achievement"
+            app:layout_constraintStart_toEndOf="@+id/tv_description_finished_amount_test_case_in_achievement"
+            app:layout_constraintTop_toTopOf="@+id/tv_description_finished_amount_test_case_in_achievement" />
+
+        <TextView
+            android:id="@+id/tv_description_intermediate_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="intermediate"
+            android:textColor="@color/Primary"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_description_more_test_case_in_achievement"
+            app:layout_constraintStart_toEndOf="@+id/tv_description_more_test_case_in_achievement"
+            app:layout_constraintTop_toTopOf="@+id/tv_description_more_test_case_in_achievement" />
+
+        <TextView
+            android:id="@+id/tv_description_level_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="level"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_description_intermediate_test_case_in_achievement"
+            app:layout_constraintStart_toEndOf="@+id/tv_description_intermediate_test_case_in_achievement"
+            app:layout_constraintTop_toTopOf="@+id/tv_description_intermediate_test_case_in_achievement" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_level_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Level"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/cl_cardview_achievement"
+        app:layout_constraintStart_toStartOf="@+id/cl_cardview_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/cl_cardview_achievement" />
+
+    <TextView
+        android:id="@+id/tv_description_level_in_achievement"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="The completion of test cases will raise your level and earn you achievements."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_level_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_level_in_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level_in_achievement" />
+
+    <TextView
+        android:id="@+id/tv_beginner_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/bg_description_achievement_beginner"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="40sp"
+        android:text="Beginner"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cl_cardview_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/cl_cardview_achievement" />
+
+    <TextView
+        android:id="@+id/tv_beginner_startfrom_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Start from"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_beginner_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_beginner_in_achievement"
+        app:layout_constraintTop_toTopOf="@+id/tv_beginner_in_achievement" />
+
+    <TextView
+        android:id="@+id/tv_beginner_0_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="0 Test Case"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_beginner_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_beginner_in_achievement"
+        app:layout_constraintTop_toTopOf="@+id/tv_beginner_in_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_intermediate_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_description_achievement_intermediate"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="50sp"
+        android:text="Intermediate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cl_cardview_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/cl_cardview_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_intermediate_200_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="200 Test Case"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_intermediate_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_intermediate_in_achievement"
+        app:layout_constraintTop_toTopOf="@+id/tv_intermediate_in_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_advanced_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_description_achievement_advanced"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="40sp"
+        android:text="Advanced"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_beginner_in_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/tv_beginner_in_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_advanced_1000_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="1000 Test Case"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_advanced_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_advanced_in_achievement"
+        app:layout_constraintTop_toTopOf="@+id/tv_advanced_in_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_mastery_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_description_achievement_mastery"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="40sp"
+        android:text="Mastery"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_intermediate_in_achievement"
+        app:layout_constraintTop_toBottomOf="@+id/tv_intermediate_in_achievement" />
+
+
+    <TextView
+        android:id="@+id/tv_mastery_2000_in_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="2000 Test Case"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_mastery_in_achievement"
+        app:layout_constraintStart_toStartOf="@+id/tv_mastery_in_achievement"
+        app:layout_constraintTop_toTopOf="@+id/tv_mastery_in_achievement" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_achievement"
+        android:layout_width="54dp"
+        android:layout_height="66dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_cardview_achievement"
+        app:layout_constraintEnd_toEndOf="@+id/cl_cardview_achievement"
+        app:layout_constraintStart_toStartOf="@+id/cl_cardview_achievement"
+        app:layout_constraintTop_toTopOf="@+id/cl_cardview_achievement" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

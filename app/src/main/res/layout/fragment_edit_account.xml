@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.edit_account.EditAccountFragment">
+
+
+    <ImageButton
+        android:id="@+id/ib_navigate_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_navigate_back"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_back_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/ib_navigate_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_user_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_profile_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_username_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Name User"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_user_profile"
+        app:layout_constraintStart_toStartOf="@+id/iv_user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user_profile" />
+
+    <TextView
+        android:id="@+id/tv_useremail_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="emailUser@gmail.com"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_username_edit_profile"
+        app:layout_constraintStart_toStartOf="@+id/tv_username_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_edit_profile" />
+
+    <TextView
+        android:id="@+id/tv_level_account"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_radius"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="4dp"
+        android:text="Beginner"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_useremail_edit_profile"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/tv_useremail_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_useremail_edit_profile" />
+
+    <TextView
+        android:id="@+id/tv_name_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Full Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level_account" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/it_name_edit_profile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Your Name"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_edit_profile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_email_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="@+id/it_name_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/it_name_edit_profile" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/it_email_edit_profile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Your Email"
+        app:layout_constraintEnd_toEndOf="@+id/it_name_edit_profile"
+        app:layout_constraintStart_toStartOf="@+id/tv_email_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_edit_profile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_password_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/password"
+        app:layout_constraintStart_toStartOf="@+id/it_email_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/it_email_edit_profile" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/it_password_edit_profile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        app:endIconMode="password_toggle"
+        android:hint="Enter Your Password"
+        app:layout_constraintEnd_toEndOf="@+id/it_email_edit_profile"
+        app:layout_constraintStart_toStartOf="@+id/tv_password_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password_edit_profile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_update_edit_profile"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Update"
+        android:backgroundTint="@color/Primary"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/it_password_edit_profile"
+        app:layout_constraintStart_toStartOf="@+id/it_password_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/it_password_edit_profile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

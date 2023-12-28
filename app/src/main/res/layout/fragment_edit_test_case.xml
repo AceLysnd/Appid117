@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.testcase.edit_test_case.EditTestCaseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_edit_test_case"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ib_navigate_back_edit_test_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_navigate_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_edit_test_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Edit Test Case"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_edit_test_case"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tv_testcase_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Test Case"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_testcase_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/tv_testcase_edit_test_case">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_testcase_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_scenario_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Scenario"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_testcase_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_scenario_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:hint="Scenario"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_scenario_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/tv_scenario_edit_test_case">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_scenario_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_edit_scenario"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ic_add_appbar"
+            app:layout_constraintTop_toTopOf="@id/it_scenario_edit_test_case"
+            app:layout_constraintBottom_toBottomOf="@id/it_scenario_edit_test_case"
+            app:layout_constraintStart_toEndOf="@id/it_scenario_edit_test_case"/>
+
+        <TextView
+            android:id="@+id/tv_test_category_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Test Category"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_scenario_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_test_category_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="342dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_test_category_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/tv_test_category_edit_test_case">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_test_category_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_precondition_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Pre Condition"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_test_category_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_precondition_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="342dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_precondition_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_precondition_edit_test_case">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_precondition_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_teststeps_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Test Steps"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_precondition_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_teststeps_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="342dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_teststeps_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_teststeps_edit_test_case">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_teststeps_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_expectation_edit_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Expectation"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_testcase_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_teststeps_edit_test_case" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_expectation_edit_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="342dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_expectation_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_expectation_edit_test_case">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_expectation_edit_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_edit_test_case"
+            android:layout_width="342dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/Primary"
+            android:text="Save"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/it_expectation_edit_test_case"
+            app:layout_constraintStart_toStartOf="@+id/it_expectation_edit_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_expectation_edit_test_case" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

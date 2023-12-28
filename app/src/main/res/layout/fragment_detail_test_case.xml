@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.testcase.detail_test_case.DetailTestCaseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayoutDetailTestCase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_navigate_back"
+                app:title="Detail Test Case"
+                app:titleCentered="false" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_detail_test_case"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayoutDetailTestCase">
+
+            <TextView
+                android:id="@+id/tv_test_case_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Test Case"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_fill_test_case_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_test_case_name"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_scenario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Scenario"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_test_case_name" />
+
+            <TextView
+                android:id="@+id/tv_fill_scenario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_scenario"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Test Category"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_scenario" />
+
+            <TextView
+                android:id="@+id/tv_fill_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_category"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_pre_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Pre Condition"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_category" />
+
+            <TextView
+                android:id="@+id/tv_fill_pre_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pre_condition"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_test_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Test Step"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_pre_condition" />
+
+            <TextView
+                android:id="@+id/tv_fill_test_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_test_step"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_expectation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Expectation"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_test_step" />
+
+            <TextView
+                android:id="@+id/tv_fill_expectation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_expectation"
+                tools:text="@string/lorem_gipsum" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Result"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_expectation" />
+
+            <TextView
+                android:id="@+id/tv_fill_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="No result yet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_result" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_result"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:cornerRadius="10dp"
+                android:text="Add result"
+                android:backgroundTint="@color/Primary"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fill_result"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_detail_test_case">
+            <TextView
+                android:id="@+id/tv_result_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Result"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <ImageButton
+                android:id="@+id/ib_edit_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_edit_item"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_result_detail_test_case_result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_result_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_tester_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Tester"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_result_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_result_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_profile_user_in_detail_test_case_result"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:textSize="7dp"
+                android:textAlignment="center"
+                android:paddingTop="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="UN"
+                android:background="@drawable/bg_ellipse_user"
+                app:layout_constraintStart_toStartOf="@+id/tv_tester_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tester_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_name_profile_user_in_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_profile_user_in_detail_test_case_result"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_user_in_detail_test_case_result"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_user_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_actually_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Actually"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_profile_user_in_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_profile_user_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_description_actually_in_detail_test_case_result"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="A notification appears saying 'Login successful!'"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_actually_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_actually_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_status_in_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_description_actually_in_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_actually_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_status_fail_in_detail_test_case_result"
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/corner_radius_status_fail"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="3dp"
+                android:text="Fail"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_status_in_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_status_medium_in_detail_test_case_result"
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10sp"
+                android:background="@drawable/corner_radius_status_medium"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="3dp"
+                android:text="Medium"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_status_fail_in_detail_test_case_result"
+                app:layout_constraintStart_toEndOf="@+id/tv_status_fail_in_detail_test_case_result"
+                app:layout_constraintTop_toTopOf="@+id/tv_status_fail_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_status_critical_in_detail_test_case_result"
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10sp"
+                android:background="@drawable/corner_radius_status_crirical"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="3dp"
+                android:text="Critical"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_status_medium_in_detail_test_case_result"
+                app:layout_constraintStart_toEndOf="@+id/tv_status_medium_in_detail_test_case_result"
+                app:layout_constraintTop_toTopOf="@+id/tv_status_medium_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_note_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Note"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_status_fail_in_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_status_fail_in_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_description_note_in_detail_test_case_result"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Device : Laptop Lenovo"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_note_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_note_detail_test_case_result" />
+
+            <TextView
+                android:id="@+id/tv_attachment_detail_test_case_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Attachment"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_description_note_in_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_note_in_detail_test_case_result" />
+
+            <ImageView
+                android:id="@+id/iv_description_attachment_in_detail_test_case_result"
+                android:layout_width="342dp"
+                android:layout_height="192dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_attachment_detail_test_case_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_attachment_detail_test_case_result" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

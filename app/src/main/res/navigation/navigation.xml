@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.qatros.logibug.ui.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.qatros.logibug.ui.user.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.qatros.logibug.ui.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_loginFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.qatros.logibug.ui.homepage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page"
+        app:popUpToInclusive="true" >
+        <action
+            android:id="@+id/action_homePageFragment_to_createProjectFragment"
+            app:destination="@id/createProjectFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_dialogDeleteProjectFragment"
+            app:destination="@id/dialogDeleteProjectFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_editProjectFragment"
+            app:destination="@id/editProjectFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_testingVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.qatros.logibug.ui.user.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createProjectFragment"
+        android:name="com.qatros.logibug.ui.homepage.create_project.CreateProjectFragment"
+        android:label="fragment_create_project"
+        tools:layout="@layout/fragment_create_project" >
+        <action
+            android:id="@+id/action_createProjectFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountAchievementFragment"
+        android:name="com.qatros.logibug.ui.account.AccountFragment"
+        android:label="fragment_account_achievement"
+        tools:layout="@layout/fragment_account" >
+
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_accountSettingFragment"
+            app:destination="@id/accountSettingFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_accountAchievementFragment_to_achievementFragment"-->
+<!--            app:destination="@id/achievementFragment" />-->
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_rateUseFragment"
+            app:destination="@id/rateUseFragment" />
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_revAchiementFragment"
+            app:destination="@id/revAchiementFragment" />
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_pencapaianFragment"
+            app:destination="@id/pencapaianFragment" />
+        <action
+            android:id="@+id/action_accountAchievementFragment_to_achievementFragment"
+            app:destination="@id/achievementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listAllReportFragment"
+        android:name="com.qatros.logibug.ui.report.list_report.ListAllReportFragment"
+        android:label="fragment_list_all_report"
+        tools:layout="@layout/fragment_list_all_report" >
+
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+        <argument
+            android:name="projectId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_listAllReportFragment_to_listReportManualFragment"
+            app:destination="@id/listReportManualFragment" />
+        <action
+            android:id="@+id/action_listAllReportFragment_to_listReportAutomationFragment"
+            app:destination="@id/listReportAutomationFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.qatros.logibug.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.qatros.logibug.ui.account.account_setting.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" >
+
+        <action
+            android:id="@+id/action_accountSettingFragment_to_accountAchievementFragment"
+            app:destination="@id/accountAchievementFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_deleteUser"
+            app:destination="@id/deleteUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievementFragment"
+        android:name="com.qatros.logibug.ui.account.achievement.AchievementFragment"
+        android:label="fragment_achievement"
+        tools:layout="@layout/fragment_achievement">
+
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.qatros.logibug.ui.account.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rateUseFragment"
+        android:name="com.qatros.logibug.ui.account.RateUseFragment"
+        android:label="fragment_rate_use"
+        tools:layout="@layout/fragment_rate_use" />
+    <dialog
+        android:id="@+id/dialogDeleteProjectFragment"
+        android:name="com.qatros.logibug.ui.homepage.delete_project.DialogDeleteProjectFragment"
+        android:label="DialogDeleteProjectFragment" >
+        <action
+            android:id="@+id/action_dialogDeleteProjectFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="projectName"
+            app:argType="string"/>
+    </dialog>
+    <fragment
+        android:id="@+id/editProjectFragment"
+        android:name="com.qatros.logibug.ui.homepage.edit_project.EditProjectFragment"
+        android:label="fragment_edit_project"
+        tools:layout="@layout/fragment_edit_project" >
+        <argument
+            android:name="projectId"
+            app:argType="integer" />
+        <argument
+            android:name="isEdited"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_editProjectFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addResultFragment"
+        android:name="com.qatros.logibug.ui.result.addresult.AddResultFragment"
+        android:label="fragment_add_result"
+        tools:layout="@layout/fragment_add_result" >
+        <action
+            android:id="@+id/action_addResultFragment_to_detailTestCaseFragment"
+            app:destination="@id/detailTestCaseFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+
+        <action
+            android:id="@+id/action_addResultFragment_to_detailTestCaseResultFragment3"
+            app:destination="@id/detailTestCaseResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTestCaseResultFragment"
+        android:name="com.qatros.logibug.ui.result.detailresult.DetailTestCaseResultFragment"
+        android:label="fragment_detail_test_case_result"
+        tools:layout="@layout/fragment_detail_test_case_result" >
+        <action
+            android:id="@+id/action_detailTestCaseResultFragment_to_addResultFragment"
+            app:destination="@id/addResultFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean"/>
+
+        <action
+            android:id="@+id/action_detailTestCaseResultFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <action
+            android:id="@+id/action_detailTestCaseResultFragment_to_editResultFragment"
+            app:destination="@id/editResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listAllVersionFragment"
+        android:name="com.qatros.logibug.ui.version.list_version.ListAllVersionFragment"
+        android:label="fragment_testing_version"
+        tools:layout="@layout/fragment_list_all_version" >
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_createTestingVersionFragment"
+            app:destination="@id/createTestingVersionFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_dialogDeleteVersionFragment"
+            app:destination="@id/dialogDeleteVersionFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_editVersionFragment"
+            app:destination="@id/editVersionFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_inviteMemberFragment"
+            app:destination="@id/inviteMemberFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_listMemberFragment"
+            app:destination="@id/listMemberFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_dialogDuplicateVersionFragment"
+            app:destination="@id/dialogDuplicateVersionFragment" />
+        <action
+            android:id="@+id/action_listAllVersionFragment_to_uploadFileApiTestingFragment"
+            app:destination="@id/uploadFileApiTestingFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createTestingVersionFragment"
+        android:name="com.qatros.logibug.ui.version.create_version.CreateVersionFragment"
+        android:label="fragment_create_testing_version"
+        tools:layout="@layout/fragment_create_version" >
+        <action
+            android:id="@+id/action_createTestingVersionFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+    </dialog>
+    <dialog
+        android:id="@+id/dialogDeleteVersionFragment"
+        android:name="com.qatros.logibug.ui.version.delete_version.DialogDeleteVersionFragment"
+        android:label="fragment_dialog_delete_version"
+        tools:layout="@layout/fragment_dialog_delete_version" >
+        <action
+            android:id="@+id/action_dialogDeleteVersionFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionName"
+            app:argType="string"/>
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+    </dialog>
+    <dialog
+        android:id="@+id/editVersionFragment"
+        android:name="com.qatros.logibug.ui.version.edit_version.EditVersionFragment"
+        android:label="fragment_edit_version"
+        tools:layout="@layout/fragment_edit_version" >
+        <action
+            android:id="@+id/action_editVersionFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean" />
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+    </dialog>
+    <fragment
+        android:id="@+id/listTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.list_test_case.ListTestCaseFragment"
+        android:label="fragment_my_testing_version"
+        tools:layout="@layout/fragment_list_test_case" >
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_createTestCaseFragment"
+            app:destination="@id/createTestCaseFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_editTestCaseFragment"
+            app:destination="@id/editTestCaseFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_dialogDeleteTestCaseFragment"
+            app:destination="@id/dialogDeleteTestCaseFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_listScenarioFragment"
+            app:destination="@id/listScenarioFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_detailTestCaseFragment"
+            app:destination="@id/detailTestCaseFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_detailTestCaseResultFragment"
+            app:destination="@id/detailTestCaseResultFragment" />
+        <action
+            android:id="@+id/action_listTestCaseFragment_to_filterTestCaseFragment"
+            app:destination="@id/filterTestCaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.create_test_case.CreateTestCaseFragment"
+        android:label="fragment_create_test_case"
+        tools:layout="@layout/fragment_create_test_case" >
+        <action
+            android:id="@+id/action_createTestCaseFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <action
+            android:id="@+id/action_createTestCaseFragment_to_createScenarioFragment"
+            app:destination="@id/createScenarioFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+    </fragment>
+    <dialog
+        android:id="@+id/createScenarioFragment"
+        android:name="com.qatros.logibug.ui.scenario.create_scenario.CreateScenarioFragment"
+        android:label="fragment_create_scenario"
+        tools:layout="@layout/fragment_create_scenario" >
+        <action
+            android:id="@+id/action_createScenarioFragment_to_createTestCaseFragment"
+            app:destination="@id/createTestCaseFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_createScenarioFragment_to_listScenarioFragment"
+            app:destination="@id/listScenarioFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/listScenarioFragment"
+        android:name="com.qatros.logibug.ui.scenario.list_scenario.ListScenarioFragment"
+        android:label="fragment_list_scenario"
+        tools:layout="@layout/fragment_list_scenario" >
+        <action
+            android:id="@+id/action_listScenarioFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_listScenarioFragment_to_editScenarioFragment"
+            app:destination="@id/editScenarioFragment" />
+        <action
+            android:id="@+id/action_listScenarioFragment_to_deleteScenarioFragment"
+            app:destination="@id/deleteScenarioFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/editScenarioFragment"
+        android:name="com.qatros.logibug.ui.scenario.edit_scenario.EditScenarioFragment"
+        android:label="fragment_edit_scenario"
+        tools:layout="@layout/fragment_edit_scenario" >
+        <action
+            android:id="@+id/action_editScenarioFragment_to_listScenarioFragment"
+            app:destination="@id/listScenarioFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="scenarioId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/deleteScenarioFragment"
+        android:name="com.qatros.logibug.ui.scenario.delete_scenario.DeleteScenarioFragment"
+        android:label="fragment_delete_scenario"
+        tools:layout="@layout/fragment_delete_scenario" >
+        <action
+            android:id="@+id/action_deleteScenarioFragment_to_listScenarioFragment"
+            app:destination="@id/listScenarioFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="scenarioId"
+            app:argType="integer"/>
+        <argument
+            android:name="scenarioName"
+            app:argType="string"/>
+    </dialog>
+    <fragment
+        android:id="@+id/editTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.edit_test_case.EditTestCaseFragment"
+        android:label="fragment_edit_test_case"
+        tools:layout="@layout/fragment_edit_test_case" >
+        <action
+            android:id="@+id/action_editTestCaseFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_editTestCaseFragment_to_detailTestCaseResultFragment"
+            app:destination="@id/detailTestCaseResultFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogDeleteTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.delete_test_case.DialogDeleteTestCaseFragment"
+        android:label="DialogDeleteTestCaseFragment" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_dialogDeleteTestCaseFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/detailTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.detail_test_case.DetailTestCaseFragment"
+        android:label="fragment_detail_test_case"
+        tools:layout="@layout/fragment_detail_test_case" >
+        <action
+            android:id="@+id/action_detailTestCaseFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_detailTestCaseFragment_to_addResultFragment"
+            app:destination="@id/addResultFragment" />
+        <action
+            android:id="@+id/action_detailTestCaseFragment_to_editTestCaseFragment"
+            app:destination="@id/editTestCaseFragment" />
+        <action
+            android:id="@+id/action_detailTestCaseFragment_to_editResultFragment"
+            app:destination="@id/editResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editResultFragment"
+        android:name="com.qatros.logibug.ui.result.editresult.EditResultFragment"
+        android:label="fragment_edit_result"
+        tools:layout="@layout/fragment_edit_result" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="testCaseId"
+            app:argType="integer"/>
+        <argument
+            android:name="resultId"
+            app:argType="integer"/>
+        <argument
+            android:name="isEdited"
+            app:argType="boolean"/>
+        <action
+            android:id="@+id/action_editResultFragment_to_detailTestCaseResultFragment"
+            app:destination="@id/detailTestCaseResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inviteMemberFragment"
+        android:name="com.qatros.logibug.ui.member.invite_member.InviteMemberFragment"
+        android:label="fragment_invite_member"
+        tools:layout="@layout/fragment_invite_member" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/listMemberFragment"
+        android:name="com.qatros.logibug.ui.member.list_member.ListMemberFragment"
+        android:label="fragment_list_member"
+        tools:layout="@layout/fragment_list_member">
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/listReportManualFragment"
+        android:name="com.qatros.logibug.ui.report.report_manual.ListReportManualFragment"
+        android:label="fragment_list_report_manual"
+        tools:layout="@layout/fragment_list_report_manual">
+
+<!--        <argument-->
+<!--            android:name="typeTest"-->
+<!--            app:argType="string"/>-->
+        <argument
+            android:name="projectId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_listReportManualFragment_to_listAllReportFragment"
+            app:destination="@id/listAllReportFragment" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/dialogDuplicateVersionFragment"
+        android:name="com.qatros.logibug.ui.version.clone_version.DialogDuplicateVersionFragment"
+        android:label="fragment_dialog_duplicate_version"
+        tools:layout="@layout/fragment_dialog_duplicate_version">
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionName"
+            app:argType="string"/>
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_dialogDuplicateVersionFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/filterTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.filter_test_case.FilterTestCaseFragment"
+        android:label="fragment_filter_test_case"
+        tools:layout="@layout/fragment_filter_test_case" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_filterTestCaseFragment_to_listFilterTestCaseFragment"
+            app:destination="@id/listFilterTestCaseFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/listFilterTestCaseFragment"
+        android:name="com.qatros.logibug.ui.testcase.filter_test_case.ListFilterTestCaseFragment"
+        android:label="fragment_list_filter_test_case"
+        tools:layout="@layout/fragment_list_filter_test_case">
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <argument
+            android:name="scenarioId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_listFilterTestCaseFragment_to_listTestCaseFragment"
+            app:destination="@id/listTestCaseFragment" />
+        <action
+            android:id="@+id/action_listFilterTestCaseFragment_to_editTestCaseFragment"
+            app:destination="@id/editTestCaseFragment" />
+        <action
+            android:id="@+id/action_listFilterTestCaseFragment_to_detailTestCaseFragment"
+            app:destination="@id/detailTestCaseFragment" />
+        <action
+            android:id="@+id/action_listFilterTestCaseFragment_to_dialogDeleteTestCaseFragment"
+            app:destination="@id/dialogDeleteTestCaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFileApiTestingFragment"
+        android:name="com.qatros.logibug.ui.apitesting.UploadFileApiTestingFragment"
+        android:label="fragment_upload_file_api_testing"
+        tools:layout="@layout/fragment_upload_file_api_testing" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_uploadFileApiTestingFragment_to_listAllVersionFragment"
+            app:destination="@id/listAllVersionFragment" />
+        <action
+            android:id="@+id/action_uploadFileApiTestingFragment_to_listDataJsonFragment"
+            app:destination="@id/listDataJsonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listDataJsonFragment"
+        android:name="com.qatros.logibug.ui.apitesting.ListDataJsonFragment"
+        android:label="fragment_list_data_json"
+        tools:layout="@layout/fragment_list_data_json" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/revAchiementFragment"
+        android:name="com.qatros.logibug.ui.account.achievement.RevAchiementFragment"
+        android:label="fragment_rev_achiement"
+        tools:layout="@layout/fragment_rev_achiement" />
+    <fragment
+        android:id="@+id/pencapaianFragment"
+        android:name="com.qatros.logibug.ui.account.PencapaianFragment"
+        android:label="fragment_pencapaian"
+        tools:layout="@layout/fragment_pencapaian" />
+
+    <dialog
+        android:id="@+id/deleteUser"
+        android:name="com.qatros.logibug.ui.user.delete_user.DeleteUser"
+        android:label="dialog_delete_user"
+        tools:layout="@layout/dialog_delete_user" >
+
+        <action
+            android:id="@+id/action_deleteUser_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/listReportAutomationFragment"
+        android:name="com.qatros.logibug.ui.report.report_automation.ListReportAutomationFragment"
+        android:label="fragment_list_report_automation"
+        tools:layout="@layout/fragment_list_report_automation" >
+
+        <argument
+            android:name="typeTest"
+            app:argType="string"/>
+        <argument
+            android:name="projectId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_listReportAutomationFragment_to_listAllReportFragment"
+            app:destination="@id/listAllReportFragment" />
+    </fragment>
+
+
+</navigation>

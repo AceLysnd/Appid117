@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="342dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/cardview_dialog"
+    android:paddingVertical="30dp"
+    tools:context="ui.member.DialogDeleteMember">
+
+    <ImageView
+        android:id="@+id/iv_dialog_delete_member"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_delete_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description_dialog_delete_member"
+        android:layout_width="182dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_dialog_delete_member"
+        app:layout_constraintStart_toStartOf="@+id/iv_dialog_delete_member"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dialog_delete_member" />
+
+    <Button
+        android:id="@+id/btn_cancel_alert_dialog_delete_member"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="93dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="100dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/Primary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_description_dialog_delete_member"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_dialog_delete_member"
+        app:strokeColor="@color/Primary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btn_delete_alert_dialog_delete_member"
+        android:layout_width="93dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_stroke"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:backgroundTint="@color/Primary"
+        app:layout_constraintStart_toStartOf="@+id/tv_description_dialog_delete_member"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_dialog_delete_member" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

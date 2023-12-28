@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.member.EditMemberFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_edit_member"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ib_navigate_back_edit_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/ic_navigate_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_namebar_edit_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Edit Member"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_edit_member"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_email_edit_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/appbar_edit_member"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_edit_member" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/it_email_edit_member"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="342dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:hint="Email"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/tv_email_edit_member"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_edit_member">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_edit_member"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_role_edit_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Role"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/it_email_edit_member"
+        app:layout_constraintTop_toBottomOf="@+id/it_email_edit_member" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/it_role_edit_member"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="342dp"
+        android:layout_height="56dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        android:hint="Role"
+        app:layout_constraintStart_toStartOf="@+id/tv_role_edit_member"
+        app:layout_constraintTop_toBottomOf="@+id/tv_role_edit_member">
+
+        <AutoCompleteTextView
+            android:id="@+id/act_role_edit_member"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save_edit_member"
+        android:layout_width="342dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/Primary"
+        android:textSize="16dp"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="@+id/it_role_edit_member"
+        app:layout_constraintStart_toStartOf="@+id/it_role_edit_member"
+        app:layout_constraintTop_toBottomOf="@+id/it_role_edit_member" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

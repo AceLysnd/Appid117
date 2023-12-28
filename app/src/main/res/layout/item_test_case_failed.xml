@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_indicator_vertical_item_test_case_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:background="@drawable/ic_indicator_vertical_failed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description_item_test_case_failed"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Validate logging into the Application using valid credentials"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_indicator_vertical_item_test_case_failed"
+        app:layout_constraintTop_toTopOf="@+id/iv_indicator_vertical_item_test_case_failed" />
+
+    <TextView
+        android:id="@+id/tv_status_scenario_in_item_test_case_failed"
+        android:layout_width="48dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/corner_radius_status"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="3dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_indicator_vertical_item_test_case_failed"
+        app:layout_constraintStart_toEndOf="@+id/iv_indicator_vertical_item_test_case_failed" />
+
+    <TextView
+        android:id="@+id/tv_status_test_in_item_test_case_failed"
+        android:layout_width="48dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/corner_radius_status_fail"
+        android:drawableLeft="@drawable/ic_negative"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="3dp"
+        android:text="Negative"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_status_scenario_in_item_test_case_failed"
+        app:layout_constraintStart_toEndOf="@+id/tv_status_scenario_in_item_test_case_failed"
+        app:layout_constraintTop_toTopOf="@+id/tv_status_scenario_in_item_test_case_failed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

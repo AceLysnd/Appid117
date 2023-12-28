@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_achievement"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.account.PencapaianFragment">
+
+    <ImageView
+        android:id="@+id/ib_navigate_back_level_criteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_navigate_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/tv_name_my_testing_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Achievement"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_navigate_back_level_criteria"
+        app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_level_criteria" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_cardview_achievement"
+        android:layout_width="372dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_my_testing_version"
+        android:background="@drawable/bg_achievement_user">
+
+        <ImageView
+            android:id="@+id/iv_achievement_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_achievement_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/tv_name_user_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_achievement_user"
+            app:layout_constraintTop_toTopOf="@+id/iv_achievement_user" />
+
+        <TextView
+            android:id="@+id/tv_rank_level_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Beginner"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_user_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_user_achievement" />
+
+        <TextView
+            android:id="@+id/tv_finished_amount_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="100"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/iv_achievement_user"
+            app:layout_constraintTop_toBottomOf="@+id/iv_achievement_user" />
+
+        <TextView
+            android:id="@+id/tv_finished_test_case_in_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="test case"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintStart_toEndOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintTop_toTopOf="@+id/tv_finished_amount_test_case_in_achievement" />
+
+        <ProgressBar
+            android:id="@+id/progress_level_test_case_achievement"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressTint="@color/Primary"
+            android:progressDrawable="@drawable/costum_progressbar_level"
+            android:progress="0"
+            style="?android:attr/progressBarStyleHorizontal"
+            app:layout_constraintStart_toStartOf="@+id/tv_finished_amount_test_case_in_achievement"
+            app:layout_constraintTop_toBottomOf="@+id/tv_finished_test_case_in_achievement" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

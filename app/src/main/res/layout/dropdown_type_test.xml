@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_dropdown_type_test"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Testing Type"
+    android:textColor="@color/black"
+    android:textSize="14sp"
+    android:fontFamily="@font/montserrat_bold"
+    android:padding="10dp"/>

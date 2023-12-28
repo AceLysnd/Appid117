@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="500dp"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/iv_logout_goodbye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_logout_goodbye"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_alert_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:text="Logout Account?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logout_goodbye" />
+
+    <TextView
+        android:id="@+id/tv_alert_message_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:text="Are you sure you want to logout the account?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_alert_message" />
+
+    <Button
+        android:id="@+id/confirm_yes_logout_button"
+        android:layout_width="93dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:text="Yes"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/Primary"
+        android:background="@drawable/btn_stroke"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/confirm_no_logout_button"
+        app:layout_constraintTop_toBottomOf="@+id/tv_alert_message_sure"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/confirm_no_logout_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:text="No"
+        android:textAllCaps="false"
+        android:textColor="@color/Primary"
+        app:strokeColor="@color/Primary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_yes_logout_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_alert_message_sure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

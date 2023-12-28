@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "992546217755",
+    "project_id": "logibug-effae",
+    "storage_bucket": "logibug-effae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992546217755:android:c92b2fa30fca30363afdbe",
+        "android_client_info": {
+          "package_name": "com.qatros.logibug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992546217755-bcqd577s480jul1j43bu2mcgpdqgvggp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy5QPKZVZZyx_XFdV8n9fds2OE0eBnzH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992546217755-bcqd577s480jul1j43bu2mcgpdqgvggp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
