@@ -24,6 +24,7 @@
             android:layout_marginStart="10dp"
             android:fontFamily="@font/montserrat_bold"
             android:textSize="14sp"
+            android:textColor="@color/black"
             card_view:layout_constraintStart_toEndOf="@+id/iv_patform"
             card_view:layout_constraintTop_toTopOf="@+id/iv_patform"
             tools:text="Project Name" />
@@ -60,6 +61,7 @@
             android:fontFamily="@font/montserrat_medium"
             android:padding="2dp"
             android:text="Manual"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="8sp"
             android:layout_marginTop="3dp"
