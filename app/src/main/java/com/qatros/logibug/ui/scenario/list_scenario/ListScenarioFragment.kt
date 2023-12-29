@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.core.data.response.scenario.ScenarioDetail
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentListScenarioBinding
+import com.qatros.logibug.ui.testcase.create_test_case.CreateTestCaseFragmentDirections
 
 @AndroidEntryPoint
 class ListScenarioFragment : Fragment(), ScenarioListListener {
@@ -63,6 +64,16 @@ class ListScenarioFragment : Fragment(), ScenarioListListener {
         }
         loadingState()
 
+        binding.fabAddFeature.setOnClickListener {
+            fromList = true
+            val action =
+                ListScenarioFragmentDirections.actionListScenarioFragmentToCreateScenarioFragment(
+                    projectId,
+                    versionId
+                )
+            findNavController().navigate(action)
+        }
+
     }
 
     private fun setupRecyclerView(list: List<ScenarioDetail>) {
@@ -102,6 +113,10 @@ class ListScenarioFragment : Fragment(), ScenarioListListener {
             binding.rvItemScenario.isVisible = !it
             binding.progressBar.isVisible = it
         }
+    }
+
+    companion object{
+        var fromList = false
     }
 
 }

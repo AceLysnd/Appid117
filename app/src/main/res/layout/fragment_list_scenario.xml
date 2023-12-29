@@ -39,7 +39,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Scenario List"
+                android:text="Feature List"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_scenario"
@@ -60,6 +60,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar_list_scenario"
         tools:listitem="@layout/item_scenario" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:tint="@color/white"
+        android:contentDescription="fab_add_my_project"
+        app:backgroundTint="@color/Primary"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_appbar" />
 
     <ProgressBar
         android:id="@+id/progressBar"

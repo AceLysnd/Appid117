@@ -446,6 +446,9 @@
         <action
             android:id="@+id/action_listScenarioFragment_to_deleteScenarioFragment"
             app:destination="@id/deleteScenarioFragment" />
+        <action
+            android:id="@+id/action_listScenarioFragment_to_createScenarioFragment"
+            app:destination="@id/createScenarioFragment" />
     </fragment>
     <dialog
         android:id="@+id/editScenarioFragment"

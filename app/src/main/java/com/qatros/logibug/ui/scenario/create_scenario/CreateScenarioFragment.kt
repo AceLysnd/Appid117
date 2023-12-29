@@ -5,6 +5,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
@@ -15,6 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.R
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentCreateScenarioBinding
+import com.qatros.logibug.ui.scenario.list_scenario.ListScenarioFragment.Companion.fromList
 
 @AndroidEntryPoint
 class CreateScenarioFragment : DialogFragment() {
@@ -44,6 +47,12 @@ class CreateScenarioFragment : DialogFragment() {
         val projectId = args.projectId
         val versionId = args.versionId
 
+        if (fromList) {
+            binding.tvShowAllScenario.visibility = GONE
+        } else {
+            binding.tvShowAllScenario.visibility = VISIBLE
+        }
+
         preferenceViewModel.getLoginState().observe(viewLifecycleOwner) {
             token = it.token
         }
@@ -65,12 +74,23 @@ class CreateScenarioFragment : DialogFragment() {
 
         createScenarioViewModel.message.observe(viewLifecycleOwner) {
             if (it == "Successfully added scenario") {
-                val action =
-                    CreateScenarioFragmentDirections.actionCreateScenarioFragmentToCreateTestCaseFragment(
-                        projectId,
-                        versionId
-                    )
-                findNavController().navigate(action)
+                if (fromList) {
+                    val action =
+                        CreateScenarioFragmentDirections.actionCreateScenarioFragmentToListScenarioFragment(
+                            projectId,
+                            versionId
+                        )
+                    findNavController().navigate(action)
+                    fromList = false
+                } else {
+                    val action =
+                        CreateScenarioFragmentDirections.actionCreateScenarioFragmentToCreateTestCaseFragment(
+                            projectId,
+                            versionId
+                        )
+                    findNavController().navigate(action)
+                }
+
             }
         }
 

@@ -17,6 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.R
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentCreateTestCaseBinding
+import com.qatros.logibug.ui.scenario.list_scenario.ListScenarioFragment.Companion.fromList
 
 @AndroidEntryPoint
 class CreateTestCaseFragment : Fragment() {
@@ -53,6 +54,8 @@ class CreateTestCaseFragment : Fragment() {
 
         val projectId = args.projectId
         val versionId = args.versionId
+
+        fromList = false
 
         binding.etTestcaseCreateTestCase.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
