@@ -27,7 +27,7 @@ class ListTestCaseAdapter(private val listTestCase: List<DetailTestCase>) :
                     tvStatusTestInItemTestCaseResult.visibility = View.GONE
                     tvStatusTestInItemTestCase.visibility = View.GONE
                     tvStatusTestInItemTestCaseSeverity.visibility = View.GONE
-                } else if (testCase.status == "pass") {
+                } else if (testCase.status == "pass" || testCase.status == "Pass") {
                     tvStatusTestInItemTestCase.setBackgroundResource(R.drawable.corner_radius_status_green)
                     ivIndicatorVerticalItemTestCase.setBackgroundResource(R.drawable.indicator_pass)
                     tvStatusTestInItemTestCaseResult.visibility = View.GONE

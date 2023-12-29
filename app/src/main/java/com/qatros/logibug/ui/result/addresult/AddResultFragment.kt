@@ -114,7 +114,7 @@ class AddResultFragment : Fragment() {
             }
 
 
-            liststatus = mutableListOf("Result State", "pass", "fail")
+            liststatus = mutableListOf("Result State", "Pass", "Fail")
             val statusDropDown = ArrayAdapter(
                 requireContext(),
                 android.R.layout.simple_spinner_dropdown_item,
@@ -126,7 +126,7 @@ class AddResultFragment : Fragment() {
                 status = liststatus[position]
             }
 
-            listpriority = mutableListOf("Priority", "urgent", "high", "medium", "low")
+            listpriority = mutableListOf("Priority", "Urgent", "High", "Medium", "Low")
             val priorityDropDown = ArrayAdapter(
                 requireContext(),
                 android.R.layout.simple_spinner_dropdown_item,
@@ -138,7 +138,7 @@ class AddResultFragment : Fragment() {
                 priority = listpriority[position]
             }
 
-            listseverity = mutableListOf("Severity", "critical", "major", "minor", "low")
+            listseverity = mutableListOf("Severity", "Critical", "Major", "Minor", "Low")
             val severityDropDown = ArrayAdapter(
                 requireContext(),
                 android.R.layout.simple_spinner_dropdown_item,
