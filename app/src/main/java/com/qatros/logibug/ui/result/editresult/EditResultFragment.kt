@@ -116,7 +116,7 @@ class EditResultFragment : Fragment() {
                 }
 
                 editResultViewModel.getResultsById(token, testCaseId)
-                liststatus = mutableListOf("Result State", "Pass", "Fail")
+                liststatus = mutableListOf("Result State", "pass", "fail")
                 val statusDropDown = ArrayAdapter(
                     requireContext(),
                     android.R.layout.simple_spinner_dropdown_item,
@@ -128,7 +128,7 @@ class EditResultFragment : Fragment() {
                     status = liststatus[position]
                 }
 
-                listpriority = mutableListOf("Priority", "Urgent", "High", "Medium", "Low")
+                listpriority = mutableListOf("Priority", "urgent", "high", "medium", "low")
                 val priorityDropDown = ArrayAdapter(
                     requireContext(),
                     android.R.layout.simple_spinner_dropdown_item,
@@ -140,7 +140,7 @@ class EditResultFragment : Fragment() {
                     priority = listpriority[position]
                 }
 
-                listseverity = mutableListOf("Severity", "Critical", "Major", "Minor", "Low")
+                listseverity = mutableListOf("Severity", "critical", "major", "minor", "low")
                 val severityDropDown = ArrayAdapter(
                     requireContext(),
                     android.R.layout.simple_spinner_dropdown_item,

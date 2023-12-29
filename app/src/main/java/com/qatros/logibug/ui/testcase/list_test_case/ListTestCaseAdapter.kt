@@ -18,10 +18,16 @@ class ListTestCaseAdapter(private val listTestCase: List<DetailTestCase>) :
         fun bind(testCase: DetailTestCase){
             with(binding){
                 tvDescriptionItemTestCase.text = testCase.testCaseName
-                tvStatusScenarioInItemTestCase.text = testCase.scenarioName
-                tvStatusTestInItemTestCase.text = testCase.status
-                tvStatusTestInItemTestCaseResult.text = testCase.priority
-                tvStatusTestInItemTestCaseSeverity.text = testCase.severity
+                tvStatusScenarioInItemTestCase.text = testCase.scenarioName.capitalize()
+                if (testCase.status == null) {
+                    tvStatusTestInItemTestCase.text = testCase.status
+                    tvStatusTestInItemTestCaseResult.text = testCase.priority
+                    tvStatusTestInItemTestCaseSeverity.text = testCase.severity
+                } else {
+                    tvStatusTestInItemTestCase.text = testCase.status.capitalize()
+                    tvStatusTestInItemTestCaseResult.text = testCase.priority.capitalize()
+                    tvStatusTestInItemTestCaseSeverity.text = testCase.severity.capitalize()
+                }
 
                 if (testCase.status.isNullOrEmpty() && testCase.severity.isNullOrEmpty() && testCase.priority.isNullOrEmpty()) {
                     tvStatusTestInItemTestCaseResult.visibility = View.GONE

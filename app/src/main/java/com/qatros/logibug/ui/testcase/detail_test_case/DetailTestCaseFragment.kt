@@ -17,6 +17,7 @@ import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentDetailTestCaseBinding
 import com.qatros.logibug.ui.result.detailresult.DetailTestCaseViewModel
 import com.qatros.logibug.ui.testcase.edit_test_case.EditTestCaseViewModel
+import java.util.Locale
 
 @AndroidEntryPoint
 class DetailTestCaseFragment : Fragment() {
@@ -106,14 +107,14 @@ class DetailTestCaseFragment : Fragment() {
             detailResult.detailTestCaseResult.observe(viewLifecycleOwner) {
                 binding.apply {
                     tvDescriptionActuallyInDetailTestCaseResult.text = it.data.actual
-                    tvStatusFailInDetailTestCaseResult.text = it.data.status
+                    tvStatusFailInDetailTestCaseResult.text = it.data.status.capitalize()
                     if (it.data.status == "pass") {
                         tvStatusFailInDetailTestCaseResult.setBackgroundResource(R.drawable.corner_radius_status_green)
                     } else {
                         tvStatusFailInDetailTestCaseResult.setBackgroundResource(R.drawable.corner_radius_status_fail)
                     }
-                    tvStatusMediumInDetailTestCaseResult.text = it.data.priority
-                    tvStatusCriticalInDetailTestCaseResult.text = it.data.severity
+                    tvStatusMediumInDetailTestCaseResult.text = it.data.priority.capitalize()
+                    tvStatusCriticalInDetailTestCaseResult.text = it.data.severity.capitalize()
                     tvDescriptionNoteInDetailTestCaseResult.text = it.data.note
                     Log.d("halo", "${it.data.imgUrl}")
                     resultId = it.data.id
