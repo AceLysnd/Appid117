@@ -19,14 +19,16 @@
 
         <TextView
             android:id="@+id/tv_method_data_json"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:background="@drawable/corner_radius_yellow"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
-            android:text="Post"
+            android:padding="4dp"
+            android:text="POST"
+            android:textSize="12sp"
+            android:textColor="@color/white"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
@@ -35,9 +37,11 @@
             android:id="@+id/tv_folder_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
             card_view:layout_constraintStart_toEndOf="@+id/tv_method_data_json"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:text="Unname Folder" />
@@ -46,11 +50,13 @@
             android:id="@+id/tv_request_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
             android:textSize="14sp"
-            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toEndOf="@id/tv_method_data_json"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_folder_name"
             tools:text="Post User" />
 
         <TextView

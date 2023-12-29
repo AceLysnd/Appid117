@@ -15,4 +15,9 @@
     <color name="Tertiary_500">#DD00D2</color>
     <color name="neutral">#808080</color>
     <color name="neutral_second">#D9D9D9</color>
+    
+    <color name="post">#22B814</color>
+    <color name="delete">#CC0000</color>
+    <color name="put">#FF9933</color>
+    <color name="get">#4DAEFF</color>
 </resources>

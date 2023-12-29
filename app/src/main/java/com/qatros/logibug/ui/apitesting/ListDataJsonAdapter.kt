@@ -1,8 +1,13 @@
 package com.qatros.logibug.ui.apitesting
 
+import android.app.PendingIntent.getActivity
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.qatros.logibug.R
 import com.qatros.logibug.core.data.response.api_testing.DetailDataJson
 import com.qatros.logibug.databinding.ItemDataJsonBinding
 
@@ -15,6 +20,15 @@ class ListDataJsonAdapter(private val listDataJson: List<DetailDataJson>) :
             fun bind(dataJson: DetailDataJson){
                 with(binding){
                     tvMethodDataJson.text = dataJson.method
+                    when (dataJson.method) {
+                        "POST" -> tvMethodDataJson.setBackgroundResource(R.drawable.corner_radius_green)
+                        "DELETE" -> tvMethodDataJson.setBackgroundResource(R.drawable.corner_radius_red)
+                        "PUT" -> tvMethodDataJson.setBackgroundResource(R.drawable.corner_radius_yellow)
+                        "GET" -> tvMethodDataJson.setBackgroundResource(R.drawable.corner_radius_blue)
+                        else -> {
+
+                        }
+                    }
                     tvFolderName.text = dataJson.folderName
                     tvRequestName.text = dataJson.requestName
                 }
