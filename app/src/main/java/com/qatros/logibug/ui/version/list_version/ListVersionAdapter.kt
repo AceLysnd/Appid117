@@ -32,6 +32,7 @@ class ListVersionAdapter(private val listVersions: List<AllVersionResponse>) :
 
                     cvItemVersion.setOnClickListener {
                         listenerVersion?.onCardVersionClicked(version.projectId, version.id, version.name)
+                        versionName = version.name
                     }
 
                 }
@@ -80,6 +81,7 @@ class ListVersionAdapter(private val listVersions: List<AllVersionResponse>) :
 
     companion object {
         var listenerVersion: VersionListListener? = null
+        var versionName = ""
     }
 
 }

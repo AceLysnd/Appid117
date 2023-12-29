@@ -37,13 +37,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Test Case"
                 android:textColor="@color/white"
-                android:textSize="20dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ib_navigate_back_my_testing_version"
                 app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_my_testing_version"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/ib_navigate_back_my_testing_version" />
 
             <ImageButton
                 android:id="@+id/ib_filter_my_testing_version"

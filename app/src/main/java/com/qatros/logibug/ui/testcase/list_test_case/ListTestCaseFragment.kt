@@ -15,6 +15,7 @@ import com.qatros.logibug.core.data.response.test_case.DetailTestCase
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentListTestCaseBinding
 import com.qatros.logibug.ui.version.list_version.ListAllVersionFragment
+import com.qatros.logibug.ui.version.list_version.ListVersionAdapter.Companion.versionName
 
 @AndroidEntryPoint
 class ListTestCaseFragment : Fragment(), TestCaseListListener {
@@ -43,6 +44,8 @@ class ListTestCaseFragment : Fragment(), TestCaseListListener {
         val projectId = args.projectId
         val versionId = args.versionId
         val typeTest = ListAllVersionFragment.typeTest
+
+        binding.tvNameMyTestingVersion.text = "Testing $versionName"
 
         binding.tvListScenario.setOnClickListener {
             val action = ListTestCaseFragmentDirections.actionListTestCaseFragmentToListScenarioFragment(projectId, versionId)
