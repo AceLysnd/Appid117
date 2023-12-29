@@ -112,9 +112,9 @@
                 android:id="@+id/tv_fill_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:fontFamily="@font/montserrat_medium"
                 android:background="@drawable/corner_radius_status_green"
+                android:padding="4dp"
                 android:textColor="@color/white"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
@@ -266,6 +266,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone"
+            tools:visibility="visible"
             android:layout_marginHorizontal="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -299,7 +300,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Tester"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_result_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_result_detail_test_case_result" />
 
@@ -326,7 +327,7 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Username"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_profile_user_in_detail_test_case_result"
                 app:layout_constraintStart_toEndOf="@+id/tv_profile_user_in_detail_test_case_result"
                 app:layout_constraintTop_toTopOf="@+id/tv_profile_user_in_detail_test_case_result" />
@@ -337,9 +338,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Actually"
+                android:text="Actual"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_profile_user_in_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name_profile_user_in_detail_test_case_result" />
 
@@ -351,7 +352,7 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="A notification appears saying 'Login successful!'"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_actually_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_actually_detail_test_case_result" />
 
@@ -369,47 +370,47 @@
 
             <TextView
                 android:id="@+id/tv_status_fail_in_detail_test_case_result"
-                android:layout_width="48dp"
-                android:layout_height="15dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/corner_radius_status_fail"
                 android:fontFamily="@font/montserrat_medium"
-                android:padding="3dp"
+                android:padding="4dp"
                 android:text="Fail"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="7sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_status_in_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_status_in_detail_test_case_result" />
 
             <TextView
                 android:id="@+id/tv_status_medium_in_detail_test_case_result"
-                android:layout_width="48dp"
-                android:layout_height="15dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 android:background="@drawable/corner_radius_status_medium"
                 android:fontFamily="@font/montserrat_medium"
-                android:padding="3dp"
+                android:padding="4dp"
                 android:text="Medium"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="7sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_status_fail_in_detail_test_case_result"
                 app:layout_constraintStart_toEndOf="@+id/tv_status_fail_in_detail_test_case_result"
                 app:layout_constraintTop_toTopOf="@+id/tv_status_fail_in_detail_test_case_result" />
 
             <TextView
                 android:id="@+id/tv_status_critical_in_detail_test_case_result"
-                android:layout_width="48dp"
-                android:layout_height="15dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
                 android:background="@drawable/corner_radius_status_crirical"
                 android:fontFamily="@font/montserrat_medium"
-                android:padding="3dp"
+                android:padding="4dp"
                 android:text="Critical"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="7sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_status_medium_in_detail_test_case_result"
                 app:layout_constraintStart_toEndOf="@+id/tv_status_medium_in_detail_test_case_result"
                 app:layout_constraintTop_toTopOf="@+id/tv_status_medium_in_detail_test_case_result" />
@@ -422,7 +423,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Note"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_status_fail_in_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_status_fail_in_detail_test_case_result" />
 
@@ -434,7 +435,7 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Device : Laptop Lenovo"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_note_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_note_detail_test_case_result" />
 
@@ -446,7 +447,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Attachment"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_description_note_in_detail_test_case_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_description_note_in_detail_test_case_result" />
 

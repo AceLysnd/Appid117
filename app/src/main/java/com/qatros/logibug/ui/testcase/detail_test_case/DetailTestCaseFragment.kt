@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.setPadding
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -89,7 +90,7 @@ class DetailTestCaseFragment : Fragment() {
 
                     if (it.data.testCategory == "positif") {
                         tvFillCategory.text = "Positive"
-                        tvFillCategory.setBackgroundResource(R.drawable.corner_radius_status_green);
+                        tvFillCategory.setBackgroundResource(R.drawable.corner_radius_status_green)
                     } else {
                         tvFillCategory.text = "Negative"
                         tvFillCategory.setBackgroundResource(R.drawable.corner_radius_status_fail)
@@ -106,6 +107,11 @@ class DetailTestCaseFragment : Fragment() {
                 binding.apply {
                     tvDescriptionActuallyInDetailTestCaseResult.text = it.data.actual
                     tvStatusFailInDetailTestCaseResult.text = it.data.status
+                    if (it.data.status == "pass") {
+                        tvStatusFailInDetailTestCaseResult.setBackgroundResource(R.drawable.corner_radius_status_green)
+                    } else {
+                        tvStatusFailInDetailTestCaseResult.setBackgroundResource(R.drawable.corner_radius_status_fail)
+                    }
                     tvStatusMediumInDetailTestCaseResult.text = it.data.priority
                     tvStatusCriticalInDetailTestCaseResult.text = it.data.severity
                     tvDescriptionNoteInDetailTestCaseResult.text = it.data.note
