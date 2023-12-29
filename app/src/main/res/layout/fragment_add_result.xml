@@ -64,7 +64,7 @@
                 android:id="@+id/tv_actually_add_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Actual"
@@ -76,14 +76,17 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_actually_add_result"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
                 android:hint="Actual"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_actually_add_result"
                 app:layout_constraintTop_toBottomOf="@id/tv_actually_add_result">
 
@@ -99,24 +102,28 @@
                 android:id="@+id/tv_state_add_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="State"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/it_actually_add_result"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/it_actually_add_result" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_result_state_in_add_result"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_state_add_result"
                 app:layout_constraintTop_toBottomOf="@+id/tv_state_add_result">
 
@@ -132,13 +139,16 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_priority_in_add_result"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/it_result_state_in_add_result"
                 app:layout_constraintTop_toBottomOf="@+id/it_result_state_in_add_result">
 
@@ -154,13 +164,16 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_severity_in_add_result"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/it_priority_in_add_result"
                 app:layout_constraintTop_toBottomOf="@+id/it_priority_in_add_result">
 
@@ -187,24 +200,28 @@
                 android:id="@+id/tv_note_add_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Note"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/it_severity_in_add_result"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/it_severity_in_add_result" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_note_add_result"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="160dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_note_add_result"
                 app:layout_constraintTop_toBottomOf="@id/tv_note_add_result">
 
@@ -241,11 +258,14 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_upload_add_result"
-                android:layout_width="342dp"
+                android:layout_width="match_parent"
                 android:layout_height="208dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
                 android:elevation="10dp"
                 app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_description_attachment_add_result"
                 app:layout_constraintTop_toTopOf="@+id/tv_description_attachment_add_result"
                 app:strokeColor="@android:color/darker_gray"
@@ -260,13 +280,13 @@
                         android:id="@+id/iv_upload_add_result"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_upload"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="10dp"
+                        android:src="@drawable/ic_upload"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_description_upload_add_result"

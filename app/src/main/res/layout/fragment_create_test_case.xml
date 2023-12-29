@@ -51,52 +51,55 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-            <TextView
-                android:id="@+id/tv_testcase_create_test_case"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Test Case"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appbar_create_test_case" />
+        <TextView
+            android:id="@+id/tv_testcase_create_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Test Case"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar_create_test_case" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/it_testcase_create_test_case"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
-                app:layout_constraintTop_toBottomOf="@+id/tv_testcase_create_test_case">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_testcase_create_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_testcase_create_test_case">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_testcase_create_test_case"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_testcase_create_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/tv_scenario_create_test_case"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Scenario"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
-                app:layout_constraintTop_toBottomOf="@+id/it_testcase_create_test_case" />
+        <TextView
+            android:id="@+id/tv_scenario_create_test_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Scenario"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/it_testcase_create_test_case" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/it_scenario_create_test_case"
@@ -144,27 +147,30 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
                 app:layout_constraintTop_toBottomOf="@+id/it_scenario_create_test_case" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/it_test_category_create_test_case"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintStart_toStartOf="@+id/tv_test_category_create_test_case"
-                app:layout_constraintTop_toBottomOf="@+id/tv_test_category_create_test_case">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_test_category_create_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_test_category_create_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/tv_test_category_create_test_case">
 
-                <AutoCompleteTextView
-                    android:id="@+id/act_test_category_create_test_case"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="none"
-                    android:textColor="@color/black" />
+            <AutoCompleteTextView
+                android:id="@+id/act_test_category_create_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:textColor="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/tv_precondition_create_test_case"
@@ -178,26 +184,29 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
                 app:layout_constraintTop_toBottomOf="@+id/it_test_category_create_test_case" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/it_precondition_create_test_case"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintStart_toStartOf="@id/tv_precondition_create_test_case"
-                app:layout_constraintTop_toBottomOf="@id/tv_precondition_create_test_case">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_precondition_create_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_precondition_create_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_precondition_create_test_case">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_precondition_create_test_case"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_precondition_create_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/tv_teststeps_create_test_case"
@@ -211,26 +220,29 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
                 app:layout_constraintTop_toBottomOf="@+id/it_precondition_create_test_case" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/it_teststeps_create_test_case"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="5dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintStart_toStartOf="@id/tv_teststeps_create_test_case"
-                app:layout_constraintTop_toBottomOf="@id/tv_teststeps_create_test_case">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_teststeps_create_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_teststeps_create_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_teststeps_create_test_case">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_teststeps_create_test_case"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_teststeps_create_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/tv_expectation_create_test_case"
@@ -244,42 +256,47 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_testcase_create_test_case"
                 app:layout_constraintTop_toBottomOf="@+id/it_teststeps_create_test_case" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/it_expectation_create_test_case"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintStart_toStartOf="@id/tv_expectation_create_test_case"
-                app:layout_constraintTop_toBottomOf="@id/tv_expectation_create_test_case">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it_expectation_create_test_case"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_expectation_create_test_case"
+            app:layout_constraintTop_toBottomOf="@id/tv_expectation_create_test_case">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_expectation_create_test_case"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_expectation_create_test_case"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/btn_create_test_case"
-                android:layout_width="342dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="50dp"
-                android:backgroundTint="#EFEFF0"
-                android:textColor="#B3B3B3"
-                android:text="Create"
-                app:cornerRadius="10dp"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/it_expectation_create_test_case"
-                app:layout_constraintStart_toStartOf="@+id/it_expectation_create_test_case"
-                app:layout_constraintTop_toBottomOf="@+id/it_expectation_create_test_case" />
+        <Button
+            android:id="@+id/btn_create_test_case"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#EFEFF0"
+            android:text="Create"
+            android:textAllCaps="false"
+            android:textColor="#B3B3B3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/it_expectation_create_test_case"
+            app:layout_constraintStart_toStartOf="@+id/it_expectation_create_test_case"
+            app:layout_constraintTop_toBottomOf="@+id/it_expectation_create_test_case" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
