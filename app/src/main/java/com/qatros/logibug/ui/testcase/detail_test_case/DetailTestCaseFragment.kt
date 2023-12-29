@@ -86,6 +86,15 @@ class DetailTestCaseFragment : Fragment() {
                 binding.apply {
                     tvFillTestCaseName.text = it.data.testCaseName
                     tvFillCategory.text = it.data.testCategory
+
+                    if (it.data.testCategory == "positif") {
+                        tvFillCategory.text = "Positive"
+                        tvFillCategory.setBackgroundResource(R.drawable.corner_radius_status_green);
+                    } else {
+                        tvFillCategory.text = "Negative"
+                        tvFillCategory.setBackgroundResource(R.drawable.corner_radius_status_fail)
+                    }
+
                     tvFillPreCondition.text = it.data.preCondition
                     tvFillExpectation.text = it.data.expectation
                     tvFillTestStep.text = it.data.testStep

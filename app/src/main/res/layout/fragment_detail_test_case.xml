@@ -15,7 +15,7 @@
             android:id="@+id/appBarLayoutDetailTestCase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/Primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -24,8 +24,10 @@
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                app:navigationIconTint="@color/white"
                 app:navigationIcon="@drawable/ic_navigate_back"
-                app:title="Detail Test Case"
+                app:title="Detail Scenario"
+                app:titleTextColor="@color/white"
                 app:titleCentered="false" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -47,6 +49,7 @@
                 android:text="Test Case"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,9 +57,12 @@
                 android:id="@+id/tv_fill_test_case_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
+                android:textSize="16sp"
                 android:maxLines="2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_test_case_name"
@@ -68,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textSize="16sp"
                 android:text="Scenario"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -78,6 +85,9 @@
                 android:id="@+id/tv_fill_scenario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:maxLines="2"
@@ -91,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textSize="16sp"
                 android:text="Test Category"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -99,19 +110,24 @@
 
             <TextView
                 android:id="@+id/tv_fill_category"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:background="@drawable/corner_radius_status_green"
+                android:textColor="@color/white"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:maxLines="2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_category"
-                tools:text="@string/lorem_gipsum" />
+                tools:text="Positive" />
 
             <TextView
                 android:id="@+id/tv_pre_condition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Pre Condition"
@@ -124,6 +140,9 @@
                 android:id="@+id/tv_fill_pre_condition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:maxLines="2"
@@ -135,6 +154,7 @@
                 android:id="@+id/tv_test_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Test Step"
@@ -147,6 +167,9 @@
                 android:id="@+id/tv_fill_test_step"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -157,6 +180,7 @@
                 android:id="@+id/tv_expectation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Expectation"
@@ -169,6 +193,9 @@
                 android:id="@+id/tv_fill_expectation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:maxLines="3"
@@ -176,22 +203,38 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_expectation"
                 tools:text="@string/lorem_gipsum" />
 
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/tv_result"
+                app:layout_constraintStart_toStartOf="@+id/tv_result"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fill_expectation" />
+
             <TextView
                 android:id="@+id/tv_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="Result"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_fill_expectation" />
+                app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <TextView
                 android:id="@+id/tv_fill_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:text="No result yet"
@@ -201,6 +244,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_add_result"
                 android:layout_width="match_parent"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat_bold"
                 android:layout_height="64dp"
                 app:cornerRadius="10dp"
                 android:text="Add result"
