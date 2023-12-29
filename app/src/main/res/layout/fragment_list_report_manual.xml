@@ -11,7 +11,7 @@
         android:id="@+id/appbar_report_detail_manual"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FFFFFF"
+        android:background="@color/Primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,6 +29,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/ic_navigate_back"
+                android:backgroundTint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Report Detail"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/ib_navigate_back_report_detail_manual"
                 app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_report_detail_manual"

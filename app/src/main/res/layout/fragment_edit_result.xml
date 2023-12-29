@@ -12,7 +12,7 @@
         android:id="@+id/appbar_add_result"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#FFFFFF"
+        android:background="@color/Primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,6 +30,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/ic_navigate_back"
+                android:backgroundTint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +42,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Edit Add Result"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_add_result"
                 app:layout_constraintTop_toTopOf="parent" />
