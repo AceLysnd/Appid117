@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_indicator_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_status_scenario_in_item_test_case"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,67 +43,69 @@
 
         <TextView
             android:id="@+id/tv_status_scenario_in_item_test_case"
-            android:layout_width="48dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/corner_radius_status"
             android:fontFamily="@font/montserrat_medium"
-            android:padding="3dp"
+            android:padding="4dp"
             android:text="Scenario"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="8sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_description_item_test_case"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_description_item_test_case" />
 
         <TextView
             android:id="@+id/tv_status_test_in_item_test_case"
-            android:layout_width="48dp"
-            android:layout_height="16dp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/corner_radius_status_fail"
             android:fontFamily="@font/montserrat_medium"
-            android:padding="3dp"
+            android:padding="4dp"
             android:text="Category"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="7sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_status_scenario_in_item_test_case"
             app:layout_constraintStart_toEndOf="@+id/tv_status_scenario_in_item_test_case"
             app:layout_constraintTop_toTopOf="@+id/tv_status_scenario_in_item_test_case" />
+
         <TextView
             android:id="@+id/tv_status_test_in_item_test_case_result"
-            android:layout_width="48dp"
-            android:layout_height="16dp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/corner_radius_status_fail"
             android:fontFamily="@font/montserrat_medium"
-            android:padding="3dp"
+            android:padding="4dp"
             android:text="Category"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="7sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_status_test_in_item_test_case"
             app:layout_constraintStart_toEndOf="@+id/tv_status_test_in_item_test_case"
-            app:layout_constraintTop_toTopOf="@+id/tv_status_scenario_in_item_test_case" />
+            app:layout_constraintTop_toTopOf="@+id/tv_status_test_in_item_test_case" />
 
         <TextView
             android:id="@+id/tv_status_test_in_item_test_case_severity"
-            android:layout_width="48dp"
-            android:layout_height="16dp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/corner_radius_status_fail"
             android:fontFamily="@font/montserrat_medium"
-            android:padding="3dp"
+            android:padding="4dp"
             android:text="Category"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="7sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_status_test_in_item_test_case_result"
             app:layout_constraintStart_toEndOf="@+id/tv_status_test_in_item_test_case_result"
-            app:layout_constraintTop_toTopOf="@+id/tv_status_scenario_in_item_test_case" />
+            app:layout_constraintTop_toTopOf="@+id/tv_status_test_in_item_test_case_result" />
 
         <ImageButton
             android:id="@+id/ib_navigate_opsi_item_test_case"
