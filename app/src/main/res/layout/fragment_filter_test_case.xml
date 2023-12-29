@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Scenario Name"
+            android:text="Feature Name"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/tv_filter_test_case"

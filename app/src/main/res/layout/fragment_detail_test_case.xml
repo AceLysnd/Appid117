@@ -26,7 +26,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIconTint="@color/white"
                 app:navigationIcon="@drawable/ic_navigate_back"
-                app:title="Detail Scenario"
+                app:title="Feature Detail"
                 app:titleTextColor="@color/white"
                 app:titleCentered="false" />
 
@@ -75,7 +75,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:textSize="16sp"
-                android:text="Scenario"
+                android:text="Feature"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

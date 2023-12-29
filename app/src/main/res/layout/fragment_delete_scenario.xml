@@ -26,7 +26,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat_medium"
         android:textAlignment="center"
-        android:text="Are you sure to delete Scenario"
+        android:text="Are you sure to delete Feature"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

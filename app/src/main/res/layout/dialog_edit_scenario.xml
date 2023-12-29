@@ -36,7 +36,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Scenario Name"
+        android:text="Feature Name"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
