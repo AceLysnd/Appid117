@@ -72,7 +72,8 @@ class MainActivity : AppCompatActivity() {
                 destination.id == R.id.uploadFileApiTestingFragment ||
                 destination.id == R.id.pencapaianFragment ||
                 destination.id == R.id.achievementFragment ||
-                destination.id == R.id.createScenarioFragment
+                destination.id == R.id.createScenarioFragment ||
+                destination.id == R.id.helpFragment
             ) {
                 binding.bottomNavigationView.visibility = View.GONE
             } else {

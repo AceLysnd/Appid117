@@ -116,6 +116,9 @@ class AccountFragment : Fragment() {
             tvAbout.setOnClickListener {
                 findNavController().navigate(R.id.action_accountAchievementFragment_to_aboutFragment)
             }
+            tvHelp.setOnClickListener {
+                findNavController().navigate((R.id.action_accountAchievementFragment_to_helpFragment))
+            }
             tvLogout.setOnClickListener {
                 showDialog()
             }
