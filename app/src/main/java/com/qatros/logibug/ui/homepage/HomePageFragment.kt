@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.qatros.logibug.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.core.data.response.project.ProjectResponse
 import com.qatros.logibug.core.datastore.PreferenceViewModel
@@ -47,9 +48,43 @@ class HomePageFragment : Fragment(), ProjectListListener {
             token = it.token
             binding.tvUserName.text = it.name
             listProjectViewModel.getAllProject(it.token)
+            listProjectViewModel.getAchievement(token, it.idUser)
         }
         addName.profiles.observe(viewLifecycleOwner) {
             binding.tvUserName.text = it.data.email
+        }
+
+        listProjectViewModel.achievementData.observe(viewLifecycleOwner) {
+            var nextLevel = ""
+            with(binding) {
+                tvStatusUser.text = it.rank.nameRank
+                when (it.rank.nameRank) {
+                    "Beginner" -> {
+                        tvStatusUser.setBackgroundResource(R.drawable.bg_beginner_tag)
+                        nextLevel = "Intermediate level"
+                    }
+
+                    "Intermediate" -> {
+                        tvStatusUser.setBackgroundResource(R.drawable.bg_intermediate_tag)
+                        nextLevel = "Advanced level"
+                    }
+
+                    "Advanced" -> {
+                        tvStatusUser.setBackgroundResource(R.drawable.bg_advanced_tag)
+                        nextLevel = "Mastery level"
+                    }
+
+                    "Mastery" -> {
+                        tvStatusUser.setBackgroundResource(R.drawable.bg_mastery_tag)
+                    }
+                }
+                tvProgress.text =
+                    it.testcaseCount.toString() + " Issues have been tested. complete " +
+                            it.rank.rankDifference + " more issues to reach " + nextLevel
+                if (it.rank.nameRank == "Mastery") {
+                    tvProgress.text = "You're at maximum level!"
+                }
+            }
         }
 
         listProjectViewModel.listProject.observe(viewLifecycleOwner) {
@@ -80,8 +115,15 @@ class HomePageFragment : Fragment(), ProjectListListener {
 
     private fun loadingState() {
         listProjectViewModel.loading.observe(viewLifecycleOwner) {
-            binding.rvItemProject.isVisible = !it
-            binding.progressBar.isVisible = it
+            with(binding) {
+                rvItemProject.isVisible = !it
+
+                tvStatusUser.isVisible = !it
+                tvProgress.isVisible = !it
+
+                progressBar.isVisible = it
+                progressBar2.isVisible = it
+            }
         }
     }
 
@@ -106,7 +148,10 @@ class HomePageFragment : Fragment(), ProjectListListener {
     }
 
     override fun onCardProjectClicked(projectId: Int, typeTest: String) {
-        val action = HomePageFragmentDirections.actionHomePageFragmentToTestingVersionFragment(typeTest, projectId)
+        val action = HomePageFragmentDirections.actionHomePageFragmentToTestingVersionFragment(
+            typeTest,
+            projectId
+        )
         Log.d("test nilai", "onCardProjectClicked: $projectId")
         findNavController().navigate(action)
     }

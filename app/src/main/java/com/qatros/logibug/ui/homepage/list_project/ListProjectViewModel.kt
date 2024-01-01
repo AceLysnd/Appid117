@@ -6,8 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import com.qatros.logibug.core.data.RemoteRepository
+import com.qatros.logibug.core.data.request.achievement.AchievementRequest
+import com.qatros.logibug.core.data.response.achievement.AchievementResponse
 import com.qatros.logibug.core.data.response.project.DeleteProjectResponse
 import com.qatros.logibug.core.data.response.project.ListProjectResponse
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -25,6 +28,15 @@ class ListProjectViewModel @Inject constructor(private val repository: RemoteRep
 
     private val _message = MutableLiveData<String>()
     val message: LiveData<String> = _message
+
+    private val _achievementData = MutableLiveData<AchievementResponse>()
+    val achievementData: LiveData<AchievementResponse> = _achievementData
+
+    private val _achievementReq = MutableLiveData<AchievementRequest>()
+    val achievementReq: LiveData<AchievementRequest> = _achievementReq
+
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
 
     fun getAllProject(token: String) {
         _loading.value = true
@@ -47,6 +59,23 @@ class ListProjectViewModel @Inject constructor(private val repository: RemoteRep
                 } else {
                     _message.value = "Gagal Menghapus Project"
                 }
+            }
+        }
+    }
+
+    fun getAchievement(token: String, userId: Int) {
+        viewModelScope.launch {
+            try {
+                _isLoading.value = true
+
+                delay(1000)
+
+                val response = repository.getAchievement(token, userId)
+                if (response.isSuccessful) {
+                    _achievementData.value = response.body()
+                }
+            }finally {
+                _isLoading.value = false
             }
         }
     }
