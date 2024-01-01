@@ -42,6 +42,7 @@ class NotificationFragment : Fragment() {
 
             listNotificationViewModel.notification.observe(viewLifecycleOwner){
                 setupRecyclerView(it.data)
+                tvReadCountStatus.text = it.total_unread.toString() + " Unread"
             }
         }
     }
