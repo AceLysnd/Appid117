@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/homePageFragment"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_home_new"
         android:title="Home" />
 
     <item
-        android:icon="@drawable/ic_report"
+        android:icon="@drawable/ic_report_new"
         android:id="@+id/listAllReportFragment"
         android:title="Report"/>
 
@@ -18,11 +18,11 @@
 
     <item
         android:id="@+id/notificationFragment"
-        android:icon="@drawable/ic_notification"
+        android:icon="@drawable/ic_notification_new"
         android:title="Notification"/>
 
     <item
         android:id="@+id/accountAchievementFragment"
-        android:icon="@drawable/ic_account_bottom_nav"
+        android:icon="@drawable/ic_account_new"
         android:title="Account" />
 </menu>
