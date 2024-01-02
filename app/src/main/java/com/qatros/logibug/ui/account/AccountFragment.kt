@@ -92,8 +92,28 @@ class AccountFragment : Fragment() {
                     .fitCenter()
                     .into(ivProfileAccount)
             }
-        }
 
+            getProfilesViewModel.achievementData.observe(viewLifecycleOwner) {
+                tvLevelAccount.text = it.rank.nameRank
+                when (it.rank.nameRank) {
+                    "Beginner" -> {
+                        tvLevelAccount.setBackgroundResource(R.drawable.bg_beginner_tag)
+                    }
+
+                    "Intermediate" -> {
+                        tvLevelAccount.setBackgroundResource(R.drawable.bg_intermediate_tag)
+                    }
+
+                    "Advanced" -> {
+                        tvLevelAccount.setBackgroundResource(R.drawable.bg_advanced_tag)
+                    }
+
+                    "Mastery" -> {
+                        tvLevelAccount.setBackgroundResource(R.drawable.bg_mastery_tag)
+                    }
+                }
+            }
+        }
     }
 
     private fun btnAction() {
@@ -129,6 +149,7 @@ class AccountFragment : Fragment() {
     private fun userLogin() {
         preferenceViewModel.getLoginState().observe(viewLifecycleOwner) {
             getProfilesViewModel.getProfiles(it.token)
+            getProfilesViewModel.getAchievement(it.token, it.idUser)
         }
     }
 

@@ -53,17 +53,15 @@
 
         <TextView
             android:id="@+id/tv_level_account"
-            android:layout_width="90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/corner_radius"
             android:fontFamily="@font/montserrat_medium"
             android:padding="4dp"
-            android:text="Beginner"
             android:layout_marginBottom="40dp"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_email_account" />
