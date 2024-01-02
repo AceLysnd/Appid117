@@ -67,7 +67,7 @@ class InviteMemberFragment : Fragment() {
 
         })
 
-        listRole = mutableListOf("Role", "dev", "qa")
+        listRole = mutableListOf("Select Role", "dev", "qa")
         val roleDropDown = ArrayAdapter(
             requireContext(), android.R.layout.simple_spinner_dropdown_item, listRole
         )

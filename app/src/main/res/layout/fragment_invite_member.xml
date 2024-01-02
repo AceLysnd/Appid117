@@ -108,7 +108,6 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        android:hint="Role"
         app:layout_constraintStart_toStartOf="@+id/tv_role_invite_member"
         app:layout_constraintTop_toBottomOf="@+id/tv_role_invite_member">
 
