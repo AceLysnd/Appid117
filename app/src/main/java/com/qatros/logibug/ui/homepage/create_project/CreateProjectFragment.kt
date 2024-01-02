@@ -1,5 +1,6 @@
 package com.qatros.logibug.ui.homepage.create_project
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -81,6 +82,15 @@ class CreateProjectFragment : Fragment() {
             actTypeTestCreateProject.setText(listTypeTest[0], false)
             actTypeTestCreateProject.setOnItemClickListener { _, _, position, _ ->
                 typeTest = listTypeTest[position]
+
+                if (typeTest == "automatic") {
+                    platform = "web"
+                    itPlatformCreateProject.isEnabled = false
+                    actPlatformCreateProject.setTextColor(Color.parseColor("#EFEFF0"))
+                } else {
+                    itPlatformCreateProject.isEnabled = true
+                    actPlatformCreateProject.setTextColor(Color.parseColor("#000000"))
+                }
             }
 
 
