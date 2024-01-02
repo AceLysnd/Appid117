@@ -1,5 +1,6 @@
 package com.qatros.logibug.ui.testcase.filter_test_case
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,6 +44,13 @@ class FilterTestCaseFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        with(binding) {
+            btnFindTestCaseByScenario.isEnabled = false
+            btnFindTestCaseByScenario.setBackgroundColor(Color.parseColor("#EFEFF0"))
+            btnFindTestCaseByScenario.setTextColor(Color.parseColor("#B3B3B3"))
+        }
+
+
         var projectId = args.projectId
         var versionId = args.versionId
 
@@ -74,6 +82,11 @@ class FilterTestCaseFragment : DialogFragment() {
                 binding.actScenario.setOnItemClickListener { _, _, position, _ ->
                     scenarioId = listScenarioId[position]
                     scenarios = listScenario[position]
+                    with(binding) {
+                        btnFindTestCaseByScenario.isEnabled = true
+                        btnFindTestCaseByScenario.setBackgroundColor(Color.parseColor("#554AF0"))
+                        btnFindTestCaseByScenario.setTextColor(Color.parseColor("#FFFFFF"))
+                    }
                 }
             }
 
