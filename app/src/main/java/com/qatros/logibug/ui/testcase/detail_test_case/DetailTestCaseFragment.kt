@@ -113,8 +113,11 @@ class DetailTestCaseFragment : Fragment() {
                     } else {
                         tvStatusFailInDetailTestCaseResult.setBackgroundResource(R.drawable.corner_radius_status_fail)
                     }
-                    tvStatusMediumInDetailTestCaseResult.text = it.data.priority.capitalize()
-                    tvStatusCriticalInDetailTestCaseResult.text = it.data.severity.capitalize()
+                    if (it.data.priority != null) {
+                        tvStatusMediumInDetailTestCaseResult.text = it.data.priority.capitalize()
+                        tvStatusCriticalInDetailTestCaseResult.text = it.data.severity.capitalize()
+                    }
+
                     tvDescriptionNoteInDetailTestCaseResult.text = it.data.note
                     Log.d("halo", "${it.data.imgUrl}")
                     resultId = it.data.id

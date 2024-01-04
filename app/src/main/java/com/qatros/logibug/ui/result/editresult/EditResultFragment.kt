@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -126,6 +127,21 @@ class EditResultFragment : Fragment() {
                 actResultStateInAddResult.setText(liststatus[0], false)
                 actResultStateInAddResult.setOnItemClickListener{ _, _, position, _ ->
                     status = liststatus[position]
+                    if (status == "pass") {
+                        itPriorityInAddResult.isEnabled = false
+                        itSeverityInAddResult.isEnabled = false
+                        priority = ""
+                        severity = ""
+                        actPriorityInAddResult.setTextColor(Color.parseColor("#EFEFF0"))
+                        actSeverityInAddResult.setTextColor(Color.parseColor("#EFEFF0"))
+                    } else {
+                        itPriorityInAddResult.isEnabled = true
+                        itSeverityInAddResult.isEnabled = true
+                        priority = actPriorityInAddResult.text.toString()
+                        severity = actSeverityInAddResult.text.toString()
+                        actPriorityInAddResult.setTextColor(Color.parseColor("#000000"))
+                        actSeverityInAddResult.setTextColor(Color.parseColor("#000000"))
+                    }
                 }
 
                 listpriority = mutableListOf("Priority", "urgent", "high", "medium", "low")

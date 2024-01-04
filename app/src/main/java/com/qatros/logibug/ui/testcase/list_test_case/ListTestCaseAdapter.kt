@@ -19,11 +19,7 @@ class ListTestCaseAdapter(private val listTestCase: List<DetailTestCase>) :
             with(binding){
                 tvDescriptionItemTestCase.text = testCase.testCaseName
                 tvStatusScenarioInItemTestCase.text = testCase.scenarioName.capitalize()
-                if (testCase.status == null) {
-                    tvStatusTestInItemTestCase.text = testCase.status
-                    tvStatusTestInItemTestCaseResult.text = testCase.priority
-                    tvStatusTestInItemTestCaseSeverity.text = testCase.severity
-                } else {
+                if (testCase.priority != null) {
                     tvStatusTestInItemTestCase.text = testCase.status.capitalize()
                     tvStatusTestInItemTestCaseResult.text = testCase.priority.capitalize()
                     tvStatusTestInItemTestCaseSeverity.text = testCase.severity.capitalize()

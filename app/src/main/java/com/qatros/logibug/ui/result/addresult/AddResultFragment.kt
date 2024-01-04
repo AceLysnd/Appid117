@@ -128,11 +128,15 @@ class AddResultFragment : Fragment() {
                 if (status == "pass") {
                     itPriorityInAddResult.isEnabled = false
                     itSeverityInAddResult.isEnabled = false
+                    priority = ""
+                    severity = ""
                     actPriorityInAddResult.setTextColor(Color.parseColor("#EFEFF0"))
                     actSeverityInAddResult.setTextColor(Color.parseColor("#EFEFF0"))
                 } else {
                     itPriorityInAddResult.isEnabled = true
                     itSeverityInAddResult.isEnabled = true
+                    priority = actPriorityInAddResult.text.toString()
+                    severity = actSeverityInAddResult.text.toString()
                     actPriorityInAddResult.setTextColor(Color.parseColor("#000000"))
                     actSeverityInAddResult.setTextColor(Color.parseColor("#000000"))
                 }
