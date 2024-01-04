@@ -3,6 +3,7 @@ package com.qatros.logibug.ui.member.list_member
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.qatros.logibug.core.data.response.member.DetailMember
@@ -26,6 +27,9 @@ class ListMemberAdapter(private val listMember: List<DetailMember>) :
                         "dev" -> tvRoleMember.text = "Programmer"
                         "qa" -> tvRoleMember.text = "QA"
                     }
+                    if (member.role == "po") {
+                        ibDeleteMember.visibility = GONE
+                    }
 
                     val firstLetters = member.email.split("")
                         .filter { it.isNotBlank() }
@@ -44,6 +48,10 @@ class ListMemberAdapter(private val listMember: List<DetailMember>) :
                             Color.parseColor("#F99B13"))
                         4 -> tvIconUsername.backgroundTintList = ColorStateList.valueOf(
                             Color.parseColor("#DD00D2"))
+                    }
+
+                    ibDeleteMember.setOnClickListener {
+                        listenerMember?.deleteMember(member.id)
                     }
                 }
             }
@@ -71,4 +79,5 @@ class ListMemberAdapter(private val listMember: List<DetailMember>) :
 
 interface MemberListListener{
     fun editMember(projectId: Int)
+    fun deleteMember(memberId: Int)
 }

@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.qatros.logibug.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.core.data.response.member.DetailMember
 import com.qatros.logibug.core.datastore.PreferenceViewModel
@@ -29,6 +31,8 @@ class ListMemberFragment : Fragment(), MemberListListener {
 
     private var token = ""
 
+    private var projectIdSelected = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -41,6 +45,7 @@ class ListMemberFragment : Fragment(), MemberListListener {
         super.onViewCreated(view, savedInstanceState)
 
         val projectId = args.projectId
+        projectIdSelected = projectId
 
         binding.ibNavigateBackMemberList.setOnClickListener {
             findNavController().popBackStack()
@@ -74,6 +79,20 @@ class ListMemberFragment : Fragment(), MemberListListener {
 
     override fun editMember(projectId: Int) {
         //
+    }
+
+    override fun deleteMember(memberId: Int) {
+        listMemberViewModel.deleteMember(token, memberId)
+        listMemberViewModel.messages.observe(viewLifecycleOwner) {
+            Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+            if (it == "Berhasil menghapus member") {
+                listMemberViewModel.getAllMember(token, projectIdSelected)
+                listMemberAdapter.notifyDataSetChanged()
+//                findNavController().navigate(R.id.action_dialogDeleteProjectFragment_to_homePageFragment)
+            } else {
+
+            }
+        }
     }
 
 }
