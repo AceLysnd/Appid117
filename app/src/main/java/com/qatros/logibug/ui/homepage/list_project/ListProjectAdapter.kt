@@ -31,6 +31,7 @@ class ListProjectAdapter(private val listProjects: List<ProjectResponse>) :
                 }
                 cvItemProject.setOnClickListener{
                     listenerProject?.onCardProjectClicked(project.id, project.typeTest)
+                    clickedProjectName = project.projectName
                 }
             }
         }
@@ -71,6 +72,7 @@ class ListProjectAdapter(private val listProjects: List<ProjectResponse>) :
 
     companion object {
         var listenerProject: ProjectListListener? = null
+        var clickedProjectName = ""
     }
 
 }

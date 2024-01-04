@@ -17,6 +17,7 @@ import com.qatros.logibug.R
 import com.qatros.logibug.core.data.response.version.AllVersionResponse
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentListAllVersionBinding
+import com.qatros.logibug.ui.homepage.list_project.ListProjectAdapter.Companion.clickedProjectName
 import com.qatros.logibug.ui.role.RoleViewModel
 import com.qatros.logibug.ui.version.clone_version.CloneVersionViewModel
 import com.qatros.logibug.ui.version.clone_version.DialogDuplicateVersionFragmentDirections
@@ -65,6 +66,8 @@ class ListAllVersionFragment : Fragment(), VersionListListener {
             fabAddVersionTesting.setOnClickListener {
                 addVersion(projectId, typeTest)
             }
+
+            tvNameMyProject.text = clickedProjectName
 
         }
 
