@@ -18,6 +18,8 @@ import com.qatros.logibug.core.data.response.version.AllVersionResponse
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentListAllVersionBinding
 import com.qatros.logibug.ui.role.RoleViewModel
+import com.qatros.logibug.ui.version.clone_version.CloneVersionViewModel
+import com.qatros.logibug.ui.version.clone_version.DialogDuplicateVersionFragmentDirections
 
 @AndroidEntryPoint
 class ListAllVersionFragment : Fragment(), VersionListListener {
@@ -29,6 +31,8 @@ class ListAllVersionFragment : Fragment(), VersionListListener {
     private val roleViewModel: RoleViewModel by viewModels()
     private val preferenceViewModel: PreferenceViewModel by viewModels()
     private lateinit var listVersionAdapter: ListVersionAdapter
+
+    private val cloneViewModel: CloneVersionViewModel by viewModels()
 
     private val args: ListAllVersionFragmentArgs by navArgs()
 
@@ -141,11 +145,18 @@ class ListAllVersionFragment : Fragment(), VersionListListener {
     }
 
     override fun cloneVersion(projectId: Int, versionId: Int, versionName: String, typeTest: String) {
-        val action =
-            ListAllVersionFragmentDirections.actionListAllVersionFragmentToDialogDuplicateVersionFragment(
-                projectId, versionId, versionName, typeTest
-            )
-        findNavController().navigate(action)
+        cloneViewModel.cloneVersion(
+            token, versionId
+        )
+        cloneViewModel.message.observe(viewLifecycleOwner) {
+            Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+            if (it == "Berhasil menduplicate version") {
+                listVersionViewModel.getAllVersion(token, projectId)
+                listVersionAdapter.notifyDataSetChanged()
+            } else {
+
+            }
+        }
     }
 
     private fun loadingState() {

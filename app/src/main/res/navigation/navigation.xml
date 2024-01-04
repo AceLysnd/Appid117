@@ -277,6 +277,9 @@
             android:name="typeTest"
             app:argType="string"/>
         <action
+            android:id="@+id/action_listAllVersionFragment_to_self"
+            app:destination="@id/listAllVersionFragment" />
+        <action
             android:id="@+id/action_listAllVersionFragment_to_createTestingVersionFragment"
             app:destination="@id/createTestingVersionFragment" />
         <action
