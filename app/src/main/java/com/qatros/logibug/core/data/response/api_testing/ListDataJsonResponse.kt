@@ -25,5 +25,6 @@ data class DetailDataJson(
     @SerializedName("req_name")
     val requestName: String,
     @SerializedName("folder")
-    val folder: Boolean
+    val folder: Boolean,
+    var statusCode: String?,
 ): Parcelable

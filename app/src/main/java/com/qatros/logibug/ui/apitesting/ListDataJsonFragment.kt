@@ -51,7 +51,9 @@ class ListDataJsonFragment : Fragment() {
             listDataJsonViewModel.getListDataJson(token, versionId)
         }
 
+        var list: List<DetailDataJson> = listOf()
         listDataJsonViewModel.listDataJson.observe(viewLifecycleOwner){
+            list = it.data
             setupRecyclerView(it.data)
             panjangData = it.data.size
         }
@@ -62,6 +64,14 @@ class ListDataJsonFragment : Fragment() {
                 listDataJsonViewModel.runDataJson(token, versionId, i)
                 Log.d("test12345", "onViewCreated: value I = $i")
             }
+        }
+
+        listDataJsonViewModel.runDataJson.observe(viewLifecycleOwner) { jsonResponse ->
+            val code = jsonResponse.data.response.code
+            list.map { detailData ->
+                detailData.statusCode=code
+            }
+            listDataJsonAdapter.notifyDataSetChanged()
         }
 
     }

@@ -31,6 +31,14 @@ class ListDataJsonAdapter(private val listDataJson: List<DetailDataJson>) :
                     }
                     tvFolderName.text = dataJson.folderName
                     tvRequestName.text = dataJson.requestName
+
+                    tvStatusCode.text = dataJson.statusCode
+                    when(dataJson.statusCode) {
+                        "200" -> tvStatusCode.setTextColor(Color.parseColor("#22B814"))
+                        "201" -> tvStatusCode.setTextColor(Color.parseColor("#22B814"))
+                        "500" -> tvStatusCode.setTextColor(Color.parseColor("#FF0000"))
+                    }
+
                 }
             }
 
