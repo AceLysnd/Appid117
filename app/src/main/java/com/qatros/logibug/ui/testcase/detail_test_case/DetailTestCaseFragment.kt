@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.core.view.setPadding
 import androidx.fragment.app.viewModels
@@ -116,6 +117,9 @@ class DetailTestCaseFragment : Fragment() {
                     if (it.data.priority != null) {
                         tvStatusMediumInDetailTestCaseResult.text = it.data.priority.capitalize()
                         tvStatusCriticalInDetailTestCaseResult.text = it.data.severity.capitalize()
+                    } else {
+                        tvStatusMediumInDetailTestCaseResult.visibility = GONE
+                        tvStatusCriticalInDetailTestCaseResult.visibility = GONE
                     }
 
                     tvDescriptionNoteInDetailTestCaseResult.text = it.data.note

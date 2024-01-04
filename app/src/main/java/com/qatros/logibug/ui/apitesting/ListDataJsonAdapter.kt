@@ -3,6 +3,8 @@ package com.qatros.logibug.ui.apitesting
 import android.app.PendingIntent.getActivity
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
@@ -30,7 +32,29 @@ class ListDataJsonAdapter(private val listDataJson: List<DetailDataJson>) :
                         }
                     }
                     tvFolderName.text = dataJson.folderName
-                    tvRequestName.text = dataJson.requestName
+                    if (dataJson.folderName == null) {
+                        tvFolderName.visibility = GONE
+                        tvRequestName.setPadding(
+                            tvRequestName.paddingLeft,
+                            18,
+                            tvRequestName.paddingRight,
+                            tvRequestName.paddingBottom
+                        )
+                    } else {
+                        tvFolderName.visibility = VISIBLE
+                        tvRequestName.setPadding(
+                            tvRequestName.paddingLeft,
+                            6,
+                            tvRequestName.paddingRight,
+                            tvRequestName.paddingBottom
+                        )
+                    }
+                    if (dataJson.requestName != null) {
+                        tvRequestName.text = dataJson.requestName.capitalize()
+                    } else {
+                        tvRequestName.text = dataJson.requestName
+                    }
+
 
                     tvStatusCode.text = dataJson.statusCode
                     when(dataJson.statusCode) {

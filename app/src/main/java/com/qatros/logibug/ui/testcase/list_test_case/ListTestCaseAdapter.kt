@@ -2,6 +2,7 @@ package com.qatros.logibug.ui.testcase.list_test_case
 
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
@@ -19,8 +20,13 @@ class ListTestCaseAdapter(private val listTestCase: List<DetailTestCase>) :
             with(binding){
                 tvDescriptionItemTestCase.text = testCase.testCaseName
                 tvStatusScenarioInItemTestCase.text = testCase.scenarioName.capitalize()
-                if (testCase.priority != null) {
+                if (testCase.status != null) {
                     tvStatusTestInItemTestCase.text = testCase.status.capitalize()
+                } else {
+                    tvStatusTestInItemTestCase.visibility = GONE
+                }
+
+                if (testCase.priority != null) {
                     tvStatusTestInItemTestCaseResult.text = testCase.priority.capitalize()
                     tvStatusTestInItemTestCaseSeverity.text = testCase.severity.capitalize()
                 }

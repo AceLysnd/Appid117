@@ -2,6 +2,7 @@ package com.qatros.logibug.ui.testcase.filter_test_case
 
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
@@ -24,8 +25,12 @@ class FilterTestCaseAdapter(private val listFilterTestCase: List<DetailFilterTes
                         Locale.ROOT
                     ) else it.toString()
                 }
-                if (testCase.status!= null) {
+                if (testCase.status != null) {
                     tvStatusTestInItemTestCase.text = testCase.status.capitalize()
+                } else {
+                    tvStatusTestInItemTestCase.visibility = GONE
+                }
+                if (testCase.priority!= null) {
                     tvStatusTestInItemTestCaseResult.text = testCase.priority.capitalize()
                     tvStatusTestInItemTestCaseSeverity.text = testCase.severity.capitalize()
                 }
