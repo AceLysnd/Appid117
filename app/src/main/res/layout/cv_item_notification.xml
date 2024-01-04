@@ -55,9 +55,9 @@
                 android:id="@+id/tv_name_project_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:fontFamily="@font/montserrat_medium"
                 android:maxLines="2"
-                android:layout_marginTop="3sp"
                 android:text="Logibug"
                 android:textColor="@color/black"
                 android:textSize="10sp"
@@ -71,7 +71,7 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="29 Maret 2023"
                 android:textColor="@color/black"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 android:layout_marginTop="5sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_name_project_notification"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name_project_notification" />
@@ -82,11 +82,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_line"
-                app:layout_constraintStart_toEndOf="@id/tv_time"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_time"
                 app:layout_constraintEnd_toStartOf="@id/tv_current_date"
-                app:layout_constraintTop_toTopOf="@id/tv_time"/>
+                app:layout_constraintStart_toEndOf="@id/tv_time"
+                app:layout_constraintTop_toTopOf="@id/tv_time" />
 
             <TextView
                 android:id="@+id/tv_current_date"
@@ -96,7 +96,7 @@
                 android:text="10.00"
                 android:textColor="@color/black"
                 android:layout_marginStart="8dp"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 android:layout_marginTop="5sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView_line"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name_project_notification" />

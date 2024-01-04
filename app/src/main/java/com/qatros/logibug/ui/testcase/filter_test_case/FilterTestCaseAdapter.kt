@@ -9,6 +9,7 @@ import com.qatros.logibug.R
 import com.qatros.logibug.core.data.response.test_case.DetailFilterTestCase
 import com.qatros.logibug.databinding.ItemTestCaseBinding
 import com.qatros.logibug.ui.version.list_version.ListAllVersionFragment
+import java.util.Locale
 
 class FilterTestCaseAdapter(private val listFilterTestCase: List<DetailFilterTestCase>) :
     RecyclerView.Adapter<FilterTestCaseAdapter.FilterTestCaseViewHolder>() {
@@ -17,11 +18,17 @@ class FilterTestCaseAdapter(private val listFilterTestCase: List<DetailFilterTes
 
         fun bind(testCase: DetailFilterTestCase){
             with(binding){
-                tvDescriptionItemTestCase.text = testCase.testCase
-                tvStatusScenarioInItemTestCase.text = testCase.scenarioName
-                tvStatusTestInItemTestCase.text = testCase.status
-                tvStatusTestInItemTestCaseResult.text = testCase.priority
-                tvStatusTestInItemTestCaseSeverity.text = testCase.severity
+                tvDescriptionItemTestCase.text = testCase.testCase.capitalize()
+                tvStatusScenarioInItemTestCase.text = testCase.scenarioName.replaceFirstChar {
+                    if (it.isLowerCase()) it.titlecase(
+                        Locale.ROOT
+                    ) else it.toString()
+                }
+                if (testCase.status!= null) {
+                    tvStatusTestInItemTestCase.text = testCase.status.capitalize()
+                    tvStatusTestInItemTestCaseResult.text = testCase.priority.capitalize()
+                    tvStatusTestInItemTestCaseSeverity.text = testCase.severity.capitalize()
+                }
 
                 if (testCase.status.isNullOrEmpty() && testCase.severity.isNullOrEmpty() && testCase.priority.isNullOrEmpty()){
                     tvStatusTestInItemTestCaseResult.visibility = View.GONE
@@ -40,8 +47,6 @@ class FilterTestCaseAdapter(private val listFilterTestCase: List<DetailFilterTes
                     tvStatusTestInItemTestCase.visibility = View.VISIBLE
                     tvStatusTestInItemTestCaseSeverity.visibility = View.VISIBLE
                 }
-
-                tvStatusScenarioInItemTestCase.text = testCase.scenarioName
 
                 val role = ListAllVersionFragment.role
 

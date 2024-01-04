@@ -98,7 +98,6 @@
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
-        android:hint="Enter Your Name"
         app:layout_constraintStart_toStartOf="@+id/tv_name_edit_profile"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_edit_profile">
 
@@ -124,7 +123,6 @@
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
-        android:hint="Enter Your Email"
         app:layout_constraintEnd_toEndOf="@+id/it_name_edit_profile"
         app:layout_constraintStart_toStartOf="@+id/tv_email_edit_profile"
         app:layout_constraintTop_toBottomOf="@+id/tv_email_edit_profile">
@@ -152,7 +150,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         app:endIconMode="password_toggle"
-        android:hint="Enter Your Password"
         app:layout_constraintEnd_toEndOf="@+id/it_email_edit_profile"
         app:layout_constraintStart_toStartOf="@+id/tv_password_edit_profile"
         app:layout_constraintTop_toBottomOf="@+id/tv_password_edit_profile">

@@ -14,21 +14,41 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayoutDetailTestCase"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
             android:backgroundTint="@color/Primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/topAppBar"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:navigationIconTint="@color/white"
-                app:navigationIcon="@drawable/ic_navigate_back"
-                app:title="Feature Detail"
-                app:titleTextColor="@color/white"
-                app:titleCentered="false" />
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/topAppBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/ic_navigate_back"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_namebar_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Scenario Detail"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/topAppBar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -46,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="Test Case"
+                android:text="Scenario"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="16sp"
@@ -248,7 +268,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:layout_height="64dp"
                 app:cornerRadius="10dp"
-                android:text="Add result"
+                android:text="Add Result"
                 android:backgroundTint="@color/Primary"
                 android:textAllCaps="false"
                 app:layout_constraintStart_toStartOf="parent"

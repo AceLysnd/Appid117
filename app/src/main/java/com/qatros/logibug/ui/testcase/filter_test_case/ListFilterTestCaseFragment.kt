@@ -60,7 +60,7 @@ class ListFilterTestCaseFragment : Fragment(), FilterTestCaseListListener {
         filterTestCaseViewModel.listFilterTestCase.observe(viewLifecycleOwner) {
             setupRecyclerView(it.data)
             val countTestCase = it.count.toString()
-            binding.tvCountTestCase.text = "$countTestCase Test Case"
+            binding.tvCountTestCase.text = "$countTestCase Feature"
         }
         loadingState()
 
@@ -109,6 +109,7 @@ class ListFilterTestCaseFragment : Fragment(), FilterTestCaseListListener {
     private fun loadingState() {
         filterTestCaseViewModel.loading.observe(viewLifecycleOwner) {
             binding.rvFilterTestCase.isVisible = !it
+            binding.tvCountTestCase.isVisible = !it
             binding.progressBar.isVisible = it
         }
     }

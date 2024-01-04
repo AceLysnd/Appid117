@@ -39,7 +39,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Filter Test Case"
+                android:text="Filter Scenario"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/ib_navigate_back_filter_test_case"
@@ -55,9 +55,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="10 Test case"
+        android:text="No Feature"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar_filter_test_case" />
 
