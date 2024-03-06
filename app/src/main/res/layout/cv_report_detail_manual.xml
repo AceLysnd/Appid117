@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Test Case"
+                android:text="Scenario"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 card_view:layout_constraintStart_toStartOf="@+id/progress_indicator_level"

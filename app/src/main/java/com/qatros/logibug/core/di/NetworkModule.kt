@@ -26,7 +26,7 @@ class NetworkModule {
 
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit{
-        val BASE_URL = "https://logibugapp.fly.dev/api/v1/"
+        val BASE_URL = "http://103.161.184.192:3000/api/v1/"
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)

@@ -114,6 +114,11 @@ class CreateTestCaseFragment : Fragment() {
 
         })
 
+        binding.btnGenerateWithAI.setOnClickListener {
+            val action = CreateTestCaseFragmentDirections.actionCreateTestCaseFragmentToAIFragment()
+            findNavController().navigate(action)
+        }
+
         binding.ivCreateScenario.setOnClickListener {
             val action =
                 CreateTestCaseFragmentDirections.actionCreateTestCaseFragmentToCreateScenarioFragment(
