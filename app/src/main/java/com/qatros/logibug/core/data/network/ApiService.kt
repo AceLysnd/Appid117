@@ -1,5 +1,6 @@
 package com.qatros.logibug.core.data.network
 
+import com.qatros.logibug.core.data.request.ai.AICommandRequest
 import id.qatros.logibug.core.data.source.remote.response.member.DeleteMemberResponse
 import com.qatros.logibug.core.data.request.login.LoginRequest
 import com.qatros.logibug.core.data.request.member.InviteMemberRequest
@@ -13,6 +14,7 @@ import com.qatros.logibug.core.data.request.test_case.EditTestCaseRequest
 import com.qatros.logibug.core.data.request.version.CreateVersionRequest
 import com.qatros.logibug.core.data.request.version.UpdateVersionRequest
 import com.qatros.logibug.core.data.response.achievement.AchievementResponse
+import com.qatros.logibug.core.data.response.ai.AICommandResponse
 import com.qatros.logibug.core.data.response.api_testing.ApiTestingResponse
 import com.qatros.logibug.core.data.response.api_testing.ListDataJsonResponse
 import com.qatros.logibug.core.data.response.api_testing.RunDataJsonResponse
@@ -303,4 +305,10 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Path("id") idUser: Int
     ): Response<DeleteUserResponse>
+
+    @POST("ai")
+    suspend fun generateAi(
+        @Body aiCommand: AICommandRequest
+    ): Response<AICommandResponse>
+
 }

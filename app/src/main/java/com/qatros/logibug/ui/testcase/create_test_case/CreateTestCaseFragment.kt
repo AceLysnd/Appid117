@@ -17,6 +17,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import com.qatros.logibug.R
 import com.qatros.logibug.core.datastore.PreferenceViewModel
 import com.qatros.logibug.databinding.FragmentCreateTestCaseBinding
+import com.qatros.logibug.ui.ai.AIFragment.Companion.aiCommandResponse
+import com.qatros.logibug.ui.ai.AIFragment.Companion.fromGenerate
 import com.qatros.logibug.ui.scenario.list_scenario.ListScenarioFragment.Companion.fromList
 
 @AndroidEntryPoint
@@ -54,6 +56,10 @@ class CreateTestCaseFragment : Fragment() {
 
         val projectId = args.projectId
         val versionId = args.versionId
+
+        if (fromGenerate) {
+            loadForm()
+        }
 
         fromList = false
 
@@ -115,7 +121,9 @@ class CreateTestCaseFragment : Fragment() {
         })
 
         binding.btnGenerateWithAI.setOnClickListener {
-            val action = CreateTestCaseFragmentDirections.actionCreateTestCaseFragmentToAIFragment()
+            val action = CreateTestCaseFragmentDirections.actionCreateTestCaseFragmentToAIFragment(
+                projectId, versionId
+            )
             findNavController().navigate(action)
         }
 
@@ -222,6 +230,16 @@ class CreateTestCaseFragment : Fragment() {
             }
         }
 
+    }
+
+    private fun loadForm() {
+        with(binding) {
+            etTestcaseCreateTestCase.setText(aiCommandResponse?.data?.testcase.toString())
+            etPreconditionCreateTestCase.setText(aiCommandResponse?.data?.precond.toString())
+            etTeststepsCreateTestCase.setText(aiCommandResponse?.data?.step.toString())
+            etExpectationCreateTestCase.setText(aiCommandResponse?.data?.expectation.toString())
+        }
+        fromGenerate = false
     }
 
     private fun getDropDownScenario(token: String, projectId: Int) {

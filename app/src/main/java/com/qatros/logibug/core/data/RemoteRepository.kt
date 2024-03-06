@@ -1,6 +1,7 @@
 package com.qatros.logibug.core.data
 
 import com.qatros.logibug.core.data.network.ApiService
+import com.qatros.logibug.core.data.request.ai.AICommandRequest
 import com.qatros.logibug.core.data.request.login.LoginRequest
 import com.qatros.logibug.core.data.request.member.InviteMemberRequest
 import com.qatros.logibug.core.data.request.project.CreateProjectRequest
@@ -426,5 +427,11 @@ class RemoteRepository @Inject constructor(private val apiService: ApiService) {
     ) = apiService.deleteUser(
         token,
         idUser
+    )
+
+    suspend fun generateAi(
+        aiCommand: AICommandRequest
+    ) = apiService.generateAi(
+        aiCommand
     )
 }

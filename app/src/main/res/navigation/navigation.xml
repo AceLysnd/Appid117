@@ -782,6 +782,16 @@
         android:id="@+id/AIFragment"
         android:name="com.qatros.logibug.ui.ai.AIFragment"
         android:label="fragment_a_i"
-        tools:layout="@layout/fragment_a_i" />
+        tools:layout="@layout/fragment_a_i" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"/>
+        <argument
+            android:name="versionId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_AIFragment_to_createTestCaseFragment2"
+            app:destination="@id/createTestCaseFragment" />
+    </dialog>
 
 </navigation>
